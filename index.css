@@ -4,9 +4,19 @@
 
 body {
   padding-bottom: 3rem;
-  background-color: rgba(168, 152, 136, 0.748) !important;
-  color: rgb(var(--bs-tertiary-color-rgb));
+  background-color: #e3eceae1 !important;
   overflow-x: hidden;
+  scroll-behavior: smooth;
+
+}
+
+::-webkit-scrollbar{
+  background-color: rgba(208, 211, 32, 0) !important;
+}
+
+img {
+  image-rendering: -webkit-optimize-contrast;
+  backface-visibility: hidden;
 }
 
 
@@ -22,6 +32,12 @@ body {
   font-style: oblique;
 }
 
+.heading{
+  display: flex;
+  position: relative;
+  top:-.75em;
+}
+
 .heading-container{
   position: relative;
   top: 3.5em;
@@ -35,37 +51,51 @@ body {
 
 /* Navbar Custom */
 
-body > nav > div > a{
-  min-width: 3em;
-  font-size: 4em !important;
-  font-weight: 800;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-style: italic;
-  display: flex;
-  justify-content: center;
-  margin: 0;
+.dropdown-center {
+  left: 50% !important;
+  transform: translateX(-50%);
+}
+
+
+li{
+margin: .15em;
+text-align: center;
+}
+
+form{
+  max-height: 1.95em;
+}
+
+svg{
+  align-content: center !important;
+}
+
+.navbar-brand{
+font-weight: 800;
+font-size: 2.75em !important;
 }
 
 .navbar-nav .nav-link {
   margin: 0 5em; /* Adds space to both left and right */
-  font-size: 1.2em;
+  font-size: 1.075rem;
+  font-weight: 800;
 }
 
 #navbarsExampleXxl > ul{
-min-width: 70em;
-min-height: 4em;
+min-width: fit-content;
+min-height: auto;
 }
 
 div.container-fluid{
-  min-height: 5em;
-
+  max-height: 3.5em;
+ 
 }
 
 .navbar{
   margin-bottom: 1em;
   display: flex;
   justify-content: center;
-
+ background-color: rgb(0, 0, 0);
 }
 .navbar .container-fluid {
   display: flex;
@@ -86,13 +116,16 @@ div.container-fluid{
 
 /* Carousel base class */
 .carousel {
-  margin-bottom: 6rem;
-  margin-top: 5em;
+  margin-bottom: auto;
+  margin-top: 1em
+  
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
-  bottom: 3rem;
+  justify-items: center;
   z-index: 10;
+  color: black !important;
+  margin-bottom: -1.75em;
 }
 
 /* Declare heights because of positioning of img element */
@@ -102,7 +135,7 @@ div.container-fluid{
 
 .carousel-caption .btn {
   background-color: black;  /* Set button background to black */
-  color: white;             /* Set button text to white */
+  color: rgb(255, 255, 255);             /* Set button text to white */
   border: none;             /* Remove border */
 }
 
@@ -111,6 +144,7 @@ div.container-fluid{
   color: black;             /* Change text color on hover */
   border: 1px solid black;  /* Add border on hover */
 }
+
 
 
 /* MARKETING CONTENT
@@ -131,9 +165,33 @@ div.container-fluid{
 
 /* Featurettes
 ------------------------- */
+/*featured images*/
+.image1{
+  height: 30em !important;
+}
+
+.feat1{
+  margin: .75em;
+  height: 17em !important;
+}
+
+
+/*featured images*/
+
+.feat2{
+  justify-items: center !important;
+  margin: .75em;
+}
+
+.feat2 .card:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
 
 .featurette-divider {
-  margin: 2rem 0; /* Space out the Bootstrap <hr> more */
+  margin: 0rem 0; /* Space out the Bootstrap <hr> more */
+  
 }
 
 /* Thin out the marketing headings */
@@ -143,11 +201,29 @@ div.container-fluid{
 }
 
 .featurette-heading {
-  font-size: 4rem !important; /* Change this value to make the heading larger */
+  font-size: 4.25rem !important; /* Change this value to make the heading larger */
 }
 
 .featurette p.lead {
-  font-size: 2.5rem !important; /* Change this value to make the paragraph text larger */
+  font-size: 3.25rem !important; /* Change this value to make the paragraph text larger */
+}
+
+.row{
+  margin-top: 0em !important;
+}
+
+/* Apply hover background ONLY to rows NOT inside a .featurette section */
+body .row:hover {
+  background-color: rgba(224, 55, 55, 0.671) !important;
+}
+
+/* Cancel it inside your shopping section */
+.featurette .row:hover {
+  background-color: transparent !important;
+}
+
+.shop{
+  margin-bottom: 15em;
 }
 /* rtl:end:remove */
 
