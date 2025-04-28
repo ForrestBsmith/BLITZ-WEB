@@ -1,0 +1,15 @@
+/* CSS for the shop page */
+  .shop.featurette + .shop.featurette {
+    margin-top: -20rem !important; /* Adjust this value to reduce the spacing */
+  }
+
+ h1 {
+    margin-top: .5em !important;
+  }
+
+  
+  .shop.featurette:last-of-type {
+    margin-bottom: 22rem !important; /* Adjust this value as needed */
+  }
+
+  
