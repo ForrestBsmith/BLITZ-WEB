@@ -4,16 +4,24 @@
 
 body {
   padding-bottom: 3rem;
-  background-color: #e3eceae1 !important;
+  background-color: #49494952 !important;
+  background-image: url();
+  background-size:cover;
   overflow-x: hidden;
   scroll-behavior: smooth;
 
 }
 
 ::-webkit-scrollbar{
-  background-color: rgba(208, 211, 32, 0) !important;
+  background-color: rgba(0, 0, 0, 0.945) !important;
+}
+::-webkit-scrollbar-track{
+  background-color: rgba(255, 255, 255, 0.945) !important;
 }
 
+::-webkit-scrollbar-thumb{
+  background-color: rgba(0, 0, 0, 0.945) !important;
+}
 img {
   image-rendering: -webkit-optimize-contrast;
   backface-visibility: hidden;
@@ -77,7 +85,7 @@ font-size: 2.75em !important;
 
 .navbar-nav .nav-link {
   margin: 0 5em; /* Adds space to both left and right */
-  font-size: 1.075rem;
+  font-size: .95rem;
   font-weight: 800;
 }
 
@@ -92,10 +100,12 @@ div.container-fluid{
 }
 
 .navbar{
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
   display: flex;
   justify-content: center;
- background-color: rgb(0, 0, 0);
+  box-shadow: rgba(0, 0, 0, 0.486) 0.01em 0em 0.5em;
+  height: 3em;
+  background-color: rgba(255, 255, 255, 0.363);
 }
 .navbar .container-fluid {
   display: flex;
@@ -111,41 +121,24 @@ div.container-fluid{
   right: 0; /* Aligns the dropdown with the parent nav item */
 }
 
+
+h1{
+  color: rgb(255, 255, 255) !important;
+  text-shadow: black 0.05em 0em 0em;
+}
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
 /* Carousel base class */
 .carousel {
-  margin-bottom: auto;
   margin-top: 1em
-  
 }
+
 /* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  justify-items: center;
-  z-index: 10;
-  color: black !important;
-  margin-bottom: -1.75em;
-}
+
+/*color of the caption on carousel*
 
 /* Declare heights because of positioning of img element */
-.carousel-item {
-  min-height: 35rem;
-}
-
-.carousel-caption .btn {
-  background-color: black;  /* Set button background to black */
-  color: rgb(255, 255, 255);             /* Set button text to white */
-  border: none;             /* Remove border */
-}
-
-.carousel-caption .btn:hover {
-  background-color: white;  /* Change background on hover */
-  color: black;             /* Change text color on hover */
-  border: 1px solid black;  /* Add border on hover */
-}
-
-
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
@@ -170,9 +163,15 @@ div.container-fluid{
   height: 30em !important;
 }
 
+.mainimage{
+  height: 30em !important;
+  position: relative;
+  margin-left: 3em;
+}
+
 .feat1{
   margin: .75em;
-  height: 17em !important;
+  height: 10em !important;
 }
 
 
@@ -212,18 +211,106 @@ div.container-fluid{
   margin-top: 0em !important;
 }
 
+
 /* Apply hover background ONLY to rows NOT inside a .featurette section */
-body .row:hover {
-  background-color: rgba(224, 55, 55, 0.671) !important;
+.hover-box:hover {
+  background-color: rgba(245, 245, 245, 0.199); /* light gray on hover */
+  box-shadow: 0 4px 8px rgba(10, 10, 10, 9.9); /* subtle shadow */
 }
 
-/* Cancel it inside your shopping section */
-.featurette .row:hover {
-  background-color: transparent !important;
+.hover-box {
+transition: background-color 0.3s ease;
+box-shadow: #ffffff;
+border: 1px solid #6c757d;
 }
+
+.v1{
+  background-color: rgba(245, 245, 245, 0.76); /* light gray on hover */
+  box-shadow: 0 4px 8px rgba(10, 10, 10, 9.9); /* subtle shadow */
+}
+/* Cancel it inside your shopping section */
+
+.digest{
+  margin-top: 1em;
+  margin-bottom: 1em;
+  background-color: rgba(245, 245, 245, 0.76); /* light gray on hover */
+  box-shadow: 0 4px 8px rgba(10, 10, 10, 9.9); /* subtle shadow */
+}
+
+.fw {
+  position: relative;
+  overflow: hidden;
+}
+
+.fw:hover {
+  height: 28em !important;
+}
+
+.fw::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image: url(Peter-Lik-Solitude-Framed-Recess-Mount_1800x.webp);
+  transform: scaleX(-1);
+  z-index: -1;
+  opacity: 0; /* hidden by default */
+  transition: opacity 0.3s ease;
+}
+
+.fw:hover::before {
+  opacity: 1;
+}
+
+
+.fwtext{
+  font-size: 1.25em;
+  font-weight: 800;
+  color: #000000 !important;
+  position: relative;
+  top: -3.5em;
+}
+
 
 .shop{
   margin-bottom: 15em;
+  margin-top: -.1099em;
+  background-color: whitesmoke; /* light gray on hover */
+  box-shadow: 0 4px 8px rgba(10, 10, 10, 9.9); /* subtle shadow */
+  border-top: none !important;
+  height: 45em !important;
+  width: 100em !important;
+}
+.shop-container{
+  margin-top: -7.5em !important;
+}
+
+.shop:hover{
+  /*background-color: rgba(245, 245, 245, 0.76); /* light gray on hover */
+ /* box-shadow: 0 4px 8px rgba(10, 10, 10, 9.9); /* subtle shadow */
+}
+
+.news:hover{
+  background-size: cover;
+  background-color: rgba(255, 0, 0, 0.342);
+}
+.news{
+  box-shadow: rgba(0, 0, 0, 0.486) 0.01em 0em 0.5em;
+  height: 20em !important;
+}
+
+.analog{
+  box-shadow: rgba(0, 0, 0, 0.486) 0.01em 0em 0.5em;
+  height: 20em !important;
+}
+
+.analog:hover{
+  background-size: cover;
+  background-color: rgba(255, 0, 0, 0.342);
 }
 
 .see-more-link {
@@ -237,6 +324,7 @@ body .row:hover {
   color: #000; /* darker on hover */
   text-decoration: underline;
 }
+
 
 
 /* rtl:end:remove */
