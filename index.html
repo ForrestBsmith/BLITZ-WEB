@@ -10,15 +10,15 @@
 
   <body>
 <!-- Navbar Start -->
-<nav class="navbar navbar-expand-xxl navbar-dark">
+<nav class="navbar navbar-expand-xxl">
     <div class="container-fluid justify-content-center">
-        <a class="navbar-brand" href="index.html">B</a>
+        <a class="navbar-brand bigb" href="index.html">B</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleXxl" aria-controls="navbarsExampleXxl" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
   
       <div class="collapse navbar-collapse justify-content-center" id="navbarsExampleXxl">
-        <ul class="navbar-nav mb-2 mb-xl-0 navbarcolor">
+        <ul class="navbar-nav mb-2 mb-xl-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5500/index.html#">Home</a>
           </li>
@@ -51,6 +51,8 @@
   BLITZFORTYFOUR
 </h1>
  </div>
+
+ 
   <!-- Carousel Start -->
 <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
   <div class="carousel-indicators">
@@ -60,7 +62,7 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active text-center">
-      <img src="mob.jpg" class="d-block w-100" alt="first slide">
+      <img src="Pebble-Beach2.jpg" class="d-block w-100" alt="first slide">
       <div class="carousel-text p-4">
         <h1>Stay up to date with the latest releases</h1>
         <p class="opacity-75">Join our E-mail list to stay up to date with upcoming releases and offers</p>
@@ -112,13 +114,21 @@
         </div>
       </div>
 
-      <div class="row  fw featurette">
-        <div class="feat1 col-md-7 fwtext">
-          <h2 class="featurette-heading fw-normal lh-1">F/W 25' Lookbook <span class="text-body-secondary"></span></h2>
-          <p class="lead">Browse Gallery</p>
-        </div>
-      </div>
-       
+     <div class="row fw featurette" id="fwContainer">
+  <div class="feat1 col-md-7 fwtext">
+    <h2 class="featurette-heading fw-normal lh-1">
+      F/W 25' Lookbook <span class="text-body-secondary"></span>
+    </h2>
+    <p class="lead">Browse Gallery</p>
+  </div>
+</div>
+
+       <script>
+  document.getElementById('fwContainer').addEventListener('click', function () {
+    this.classList.toggle('active');
+  });
+</script>
+
      
 
       <style>
@@ -224,7 +234,7 @@
       <!-- Start of Shopping Section -->
       <div class="shop featurette py-5 product-grid">
         <div class="container shop-container">
-          <div class="d-flex justify-content-between align-items-end mb-4">
+          <div class="d-flex justify-content-between align-items-end">
             <h2 class="featurette-heading fw-normal lh-1 mb-0">Men's Apparel</h2>
             <a href="shop.html" class="see-more-link">See More</a>
           </div>
@@ -236,9 +246,9 @@
                 <div class="product-image-container">
                   <img src="IMG_9588.jpg" alt="Product 1">
                 </div>
-                <span class="product-name">Product Name</span>
-                <span class="product-color">Color</span>
-                <div class="product-price">$59.99</div>
+                <span class="product-name">BLITZ 44 DAILY TEE</span>
+                <span class="product-color">Navy</span>
+                <div class="product-price">$39.99</div>
               </a>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3">
@@ -246,9 +256,9 @@
                 <div class="product-image-container">
                   <img src="IMG_9596.jpg" alt="Product 2">
                 </div>
-                <span class="product-name">Product Name</span>
-                <span class="product-color">Color</span>
-                <div class="product-price">$64.99</div>
+                <span class="product-name">BLITZ 44 DAILY TEE</span>
+                <span class="product-color">Brownwood</span>
+                <div class="product-price">$39.99</div>
               </a>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3">
@@ -256,9 +266,9 @@
                 <div class="product-image-container">
                   <img src="IMG_9609.jpg" alt="Product 3">
                 </div>
-                <span class="product-name">Product Name</span>
-                <span class="product-color">Color</span>
-                <div class="product-price">$49.99</div>
+                <span class="product-name">BLITZ 44 DAILY TEE</span>
+                <span class="product-color">Slate</span>
+                <div class="product-price">$39.99</div>
               </a>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3">
@@ -266,9 +276,9 @@
                 <div class="product-image-container">
                   <img src="IMG_9589.jpg" alt="Product 4">
                 </div>
-                <span class="product-name">Product Name</span>
-                <span class="product-color">Color</span>
-                <div class="product-price">$54.99</div>
+                <span class="product-name">BLITZ 44 DAILY TEE</span>
+                <span class="product-color">Navy</span>
+                <div class="product-price">$39.99</div>
               </a>
             </div>
           </div>
@@ -276,19 +286,24 @@
       </div>
       
 
-      <div class="row align-items-start g-0 digest"  style="margin-bottom: 15em !important;">
+
+              <!--START OF LINKPADS-->
+
+
+
+      <div class="row align-items-start g-0 digest">
         <!-- First Box -->
         <div class="col-md-6 news">
           <div class="hover-box left-box p-4 h-100">
-            <h2 class="featurette-heading fw-normal lh-1">44 NEWS</h2>
+            <h2 class="fw-normal lh-1">44 NEWS</h2>
             <p class="lead">Monthly Edition</p>
           </div>
         </div>
       
         <!-- Second Box -->
         <div class="col-md-6 analog">
-          <div class="hover-box p-4 h-100 text-end">
-            <h2 class="featurette-heading fw-normal lh-1">FORTYFOUR DAYS</h2>
+          <div class="hover-box p-4 h-100">
+            <h2 class="fw-normal lh-1">FORTYFOUR DAYS</h2>
             <p class="lead">An analog Journey</p>
           </div>
         </div>
@@ -299,47 +314,31 @@
         <!-- First Box -->
         <div class="col-md-6 news">
           <div class="hover-box left-box p-4 h-100">
-            <h2 class="featurette-heading fw-normal lh-1">Catalouge 25'</h2>
+            <h2 class="fw-normal lh-1">Catalouge 25'</h2>
             <p class="lead">Monthly Edition</p>
           </div>
         </div>
       
         <!-- Second Box -->
         <div class="col-md-6 analog">
-          <div class="hover-box p-4 h-100 text-end">
-            <h2 class="featurette-heading fw-normal lh-1">PhotoBooth</h2>
+          <div class="hover-box p-4 h-100">
+            <h2 class="fw-normal lh-1">PhotoBooth</h2>
             <p class="lead">An Collection of events</p>
           </div>
         </div>
       </div>
-
-  </body>
-
       <!-- END THE FEATURETTES -->
+
+      <!--start of newsletter email-->
 <div class="newsletter text-center">
-<div class="container">
-  <h2 class="featurette-heading fw-normal lh-1">Subscrible To Our Newsletter</h2>
-  <p class="lead"></p>
-  <form class="d-flex">
-    <input type="email" class="form-control me-2" placeholder="Enter your email" aria-label="Email">
-    <button class="btn btn-outline-secondary" type="submit">Subscribe</button>
+<div class="container newslettertext">
+  <h2 class=" fw-normal lh-1">Subscrible To Our Newsletter</h2>
+  <p class="lead">Stay up to date with current releases</p>
+  <form class="d-flex text-center">
+    <input type="email" class="form-control me-2 text-center" placeholder="Enter your email" aria-label="Email">
+    <button class="btn" type="submit">Subscribe</button>
   </form>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
       <!-- Start Of Footer -->
       <style>
@@ -411,11 +410,12 @@
     <!-- facebook, instagram, twitter -->
   </svg>
   
+  
   <div class="container">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-4 my-4 border-top">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-4 my-4 footer">
       
       <!-- Company Info -->
-      <div class="col-md-4 d-flex align-items-center">
+      <div class="col-md-4 d-flex align-items-center footer">
         <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
           <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
         </a>
@@ -423,7 +423,7 @@
       </div>
   
       <!-- Useful Links -->
-      <div class="col-md-4 d-flex justify-content-center">
+      <div class="col-md-4 d-flex justify-content-center footer">
         <ul class="nav flex-column text-center">
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Contact</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQ</a></li>
@@ -433,7 +433,7 @@
         </ul>
       </div>
 
-      <div class="col-md-4 d-flex justify-content-end">
+      <div class="col-md-4 d-flex justify-content-end footer">
         <ul class="nav flex-column text-center">
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Contact</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQ</a></li>
@@ -456,6 +456,6 @@
       <!-- End Of Footer -->
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  
+
   </body>
 </html>
