@@ -4,12 +4,152 @@ h1{
   margin-bottom: 1em !important;
 }
  
-.Apparel{
-  margin-bottom: 3em !important;
-}
-  
-img{
-  
+
+/*PRODUCT CXARDS START*/  
+/* GENERAL RESET */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-  
+/* Wrapper to stack header and cards */
+.section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+  background-color: white;
+  position: relative;
+  top:auto;
+}
+
+/* Header Style */
+.header {
+  margin-bottom: 1em;
+  margin-right: 50%;
+}
+
+/* Flex row of cards */
+.mensproducts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+/* Individual card */
+.productcard {
+  width: 250px;
+ 
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Image styling */
+.productcard img {
+  width: 100%;
+  height: 280px; /* if on auto keeps aspect ratio */
+  display: block;
+}
+
+/* Text area */
+.cardtext {
+  font-family: sans-serif;
+}
+
+/* Typography */
+.productname {
+  font-size: 1.3em;
+  margin: 0;
+}
+
+.cardbio {
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+.cardprice {
+  font-size: 0.9em;
+  font-weight: bold;
+  margin: 0.2em 0 0;
+}
+
+/* Hover effect */
+.productcard:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.258);
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+
+
+
+
+/*javascript sorter*/
+.sort-row {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em 2em;
+  box-sizing: border-box;
+}
+
+.sort-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  max-width: 85rem;
+  max-height: 75rem;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 12px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content img {
+  max-width: 300px;
+  max-height: 450px;
+  border-radius: 8px;
+}
+
+.modal-description {
+  margin-top: 1rem;
+  font-family: sans-serif;
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 1.8rem;
+  color: #666;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
+
+/*experimental footer*/
+

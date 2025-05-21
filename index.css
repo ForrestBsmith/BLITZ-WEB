@@ -82,9 +82,9 @@ color: white !important;
 }
 
 .navbar-nav .nav-link {
-  margin: 0 5em; /* Adds space to both left and right */
-  font-size: .95rem;
-  font-weight: 800;
+  margin: 0 8em; /* Adds space to both left and right */
+  font-size: 1rem;
+  font-weight: 780;
   text-shadow: black 0.1em .10em .0em;
   color: white !important;
 }
@@ -172,21 +172,15 @@ box-shadow: 0 4px 8px rgba(10, 10, 10, 9.9); /* subtle shadow */
 /* Featurettes
 ------------------------- */
 /*featured images*/
-.image1{
-  height: 30em !important;
+.mainimagecontainer{
+  height: 35em !important;
 }
 
 .mainimage{
-  height: 30em !important;
+  height: 35em !important;
   position: relative;
   margin-left: 3em;
 }
-
-.feat1{
-  margin: .75em;
-  height: 10em !important;
-}
-
 
 /*featured images*/
 
@@ -213,11 +207,13 @@ box-shadow: 0 4px 8px rgba(10, 10, 10, 9.9); /* subtle shadow */
 }
 
 .featurette-heading {
-  font-size: 4.25rem !important; /* Change this value to make the heading larger */
+  font-size: 5.25rem !important; /* Change this value to make the heading larger */
+  font-style: italic !important;
 }
 
 .featurette p.lead {
   font-size: 3.25rem !important; /* Change this value to make the paragraph text larger */
+  font-style: oblique !important;
 }
 
 .row{
@@ -279,6 +275,8 @@ border: 1px solid #6c757d;
   color: #000000 !important;
   position: relative;
   top: -3.5em;
+    margin: .75em;
+  height: 15em !important;
 }
 
 
@@ -311,10 +309,14 @@ border: 1px solid #6c757d;
 
 h2{
   font-size: 4em !important;
+  font-style: oblique !important;
+
 }
 
 .lead{
   font-size: 2.5em !important;
+  font-style: oblique !important;
+
 }
 
 .news:hover{
@@ -355,22 +357,15 @@ form{
   margin-bottom: 15em;
 }
 
-.newsletter{
-  background-color:  rgba(191, 192, 138, 0.664);
-}
 
 .newslettertext{
   position: relative;
-  top: 12em;
+  top: 8em;
 }
 
 .footer{
   margin-top: 7em;
 }
-
-/* rtl:end:remove */
-
-/* Footer Custom */
 
 
 /* RESPONSIVE CSS
