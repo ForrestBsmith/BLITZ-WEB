@@ -157,6 +157,66 @@
         </div>
       </div>  
 
+
+      <div class="section-container">
+    <div class="header">
+      <h2>Accessories</h2>
+     </div>
+
+
+                                <!-- Cards container -->
+    <div class="mensproducts">
+      <!-- Product card 1 -->
+      <div class="productcard" data-price="39.99">
+        <!-- Product image that triggers modal -->
+<img src="IMG_2602.JPG" class="product-image" onclick="openModal()">
+        <div class="cardtext">
+          <p class="productname">"BLITZ"</p>
+          <span class="cardbio">Essential Tee</span>
+          <p class="cardprice">$39.99</p>
+        </div>
+      </div>
+
+            <div class="productcard" data-price="59.99">
+        <!-- Product image that triggers modal -->
+<img src="IMG_2602.JPG" class="product-image" onclick="openModal()">
+        <div class="cardtext">
+          <p class="productname">"BLITZ"</p>
+          <span class="cardbio">Essential Tee</span>
+          <p class="cardprice">$59.99</p>
+        </div>
+      </div>
+
+            <div class="productcard" data-price="69.99">
+        <!-- Product image that triggers modal -->
+<img src="IMG_2602.JPG" class="product-image" onclick="openModal()">
+        <div class="cardtext">
+          <p class="productname">"BLITZ"</p>
+          <span class="cardbio">Essential Tee</span>
+          <p class="cardprice">$69.99</p>
+        </div>
+      </div>
+
+            <div class="productcard" data-price="79.99">
+        <!-- Product image that triggers modal -->
+<img src="IMG_2602.JPG" class="product-image" onclick="openModal()">
+        <div class="cardtext">
+          <p class="productname">"BLITZ"</p>
+          <span class="cardbio">Essential Tee</span>
+          <p class="cardprice">$79.99</p>
+        </div>
+      </div>
+      
+                <div class="productcard" data-price="79.99">
+        <!-- Product image that triggers modal -->
+<img src="IMG_2602.JPG" class="product-image" onclick="openModal()">
+        <div class="cardtext">
+          <p class="productname">"BLITZ"</p>
+          <span class="cardbio">Essential Tee</span>
+          <p class="cardprice">$79.99</p>
+        </div>
+      </div>
+      
 <!-- Modal structure -->
 <div id="imageModal" class="modal">
   <div class="modal-content">
@@ -199,6 +259,17 @@
        </div>
     </div> <!-- .modal-details -->
 </div>
+</div>
+<script>
+  const sizeButtons = document.querySelectorAll('#modal-size .size');
+
+  sizeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      sizeButtons.forEach(btn => btn.classList.remove('selected'));
+      button.classList.add('selected');
+    });
+  });
+</script>
 
 <script>
   function openModal() {
@@ -233,7 +304,20 @@
     });
   });
 </script>
+<div class="footercontainer">
+        <!--start of newsletter email-->
+<div class="newsletter text-center">
+<div class="container newslettertext">
+  <h2 class=" fw-normal lh-1">Subscrible To Our Newsletter</h2>
+  <p class="lead">Stay up to date with current releases</p>
+  <form class="d-flex text-center">
+    <input type="email" class="form-control me-2 text-center" placeholder="Enter your email" aria-label="Email">
+    <button class="btn" type="submit">Subscribe</button>
+  </form>
+</div>
 
+      <!-- Start Of Footer -->
+</div>
 
 </body>
 

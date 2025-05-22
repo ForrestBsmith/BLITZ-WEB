@@ -1,7 +1,7 @@
 /* CSS for the shop page */
 
 h1{
-  margin-bottom: 1em !important;
+  margin-bottom: 8px !important;
 }
  
 
@@ -26,7 +26,8 @@ body {
 
 /* Header Style */
 .header {
-  margin-bottom: 1em;
+  margin-top: 3em;
+  margin-bottom: .5em;
   margin-right: 50%;
 }
 
@@ -124,6 +125,12 @@ body {
   gap: 2rem;
   min-height: 400px; /* NEW */
 }
+
+.size.selected {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+  }
 
 .main-image {
   width: 250px;
