@@ -1,0 +1,222 @@
+/* CSS for the shop page */
+
+h1{
+  margin-bottom: 8px !important;
+}
+ 
+
+/*PRODUCT CXARDS START*/  
+/* GENERAL RESET */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Wrapper to stack header and cards */
+.section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+  background-color: white;
+  position: relative;
+  top:auto;
+}
+
+/* Header Style */
+.header {
+  margin-top: 3em;
+  margin-bottom: .5em;
+  margin-right: 50%;
+}
+
+/* Flex row of cards */
+.mensproducts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+/* Individual card */
+.productcard {
+  width: 250px;
+ 
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Image styling */
+.productcard img {
+  width: 100%;
+  height: 280px; /* if on auto keeps aspect ratio */
+  display: block;
+}
+
+/* Text area */
+.cardtext {
+  font-family: sans-serif;
+}
+
+/* Typography */
+.productname {
+  font-size: 1.3em;
+  margin: 0;
+}
+
+.cardbio {
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+.cardprice {
+  font-size: 0.9em;
+  font-weight: bold;
+  margin: 0.2em 0 0;
+}
+
+/* Hover effect */
+.productcard:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.258);
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.501);
+}
+
+
+/*javascript sorter*/
+.sort-row {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em 2em;
+  box-sizing: border-box;
+}
+
+.sort-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+/*javascript sorter*/
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: row !important;
+  background: #fff;
+  width: 50% !important;
+  max-width: 85rem;
+  padding: 2rem;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  gap: 2rem;
+  min-height: 400px; /* NEW */
+}
+
+.size.selected {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+  }
+
+.main-image {
+  width: 250px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  align-self: flex-start; /* NEW */
+}
+
+.modal-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Optional spacing between sections */
+.modal-details > *:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.preview {
+  display: flex;
+  gap: 10px;
+}
+
+.image-preview {
+  height: 5em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.image-preview:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.description-wrapper{
+ outline: aut;
+}
+
+.modal-description h2 {
+  margin: 0;
+}
+
+.modal-price {
+  font-size: 2em;
+  font-weight: 800;
+}
+
+.checkoutwrapper{
+  justify-content: flex-end !important;
+  display: flex;
+}
+
+.modal-size {
+  display: flex;
+  gap: 10px;
+}
+
+.size {
+  padding: 8px 12px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #eee;
+}
+
+.size:hover {
+  background-color: #ddd;
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 1.8rem;
+  color: #666;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
+/*experimental footer*/
+
