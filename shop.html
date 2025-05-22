@@ -159,9 +159,9 @@
       
       <!-- Previews -->
       <div class="preview" id="preview">
-        <img src="IMG_2602.JPG" alt="preview" class="image-preview">
-        <img src="IMG_2602.JPG" alt="preview" class="image-preview">
-        <img src="IMG_2602.JPG" alt="preview" class="image-preview">
+        <img src="IMG_9588.jpg" alt="preview" class="image-preview">
+        <img src="IMG_9596.jpg" alt="preview" class="image-preview">
+        <img src="IMG_9589.jpg" alt="preview" class="image-preview">
       </div>
 
       <!-- Description -->
@@ -182,6 +182,9 @@
         <button class="size">MEDIUM</button>
         <button class="size">LARGE</button>
       </div>
+      <div class="checkoutwrapper">
+      <button class="checkout">Add To Cart</button>
+       </div>
        </div>
     </div> <!-- .modal-details -->
 </div>
@@ -207,6 +210,17 @@
       modal.style.display = "none";
     }
   }
+   // Wait until DOM is fully loaded
+  document.addEventListener("DOMContentLoaded", function () {
+    const mainImage = document.getElementById("modal-img"); // your main image
+    const previews = document.querySelectorAll(".image-preview"); // all preview thumbnails
+
+    previews.forEach(preview => {
+      preview.addEventListener("click", () => {
+        mainImage.src = preview.src; // change the src of main image
+      });
+    });
+  });
 </script>
 
 

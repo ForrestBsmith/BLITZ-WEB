@@ -175,6 +175,11 @@ body {
   font-weight: 800;
 }
 
+.checkoutwrapper{
+  justify-content: flex-end !important;
+  display: flex;
+}
+
 .modal-size {
   display: flex;
   gap: 10px;
