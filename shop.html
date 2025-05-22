@@ -98,7 +98,7 @@
       <!-- Product card 1 -->
       <div class="productcard" data-price="39.99">
         <!-- Product image that triggers modal -->
-<img src="IMG_9598.jpg" class="product-image" onclick="openModal()">
+<img src="IMG_2602.JPG" class="product-image" onclick="openModal()">
         <div class="cardtext">
           <p class="productname">"BLITZ"</p>
           <span class="cardbio">Essential Tee</span>
@@ -106,48 +106,86 @@
         </div>
       </div>
 
-            <div class="productcard" data-price="39.99">
+            <div class="productcard" data-price="59.99">
         <!-- Product image that triggers modal -->
-<img src="IMG_9598.jpg" class="product-image" onclick="openModal()">
+<img src="IMG_2602.JPG" class="product-image" onclick="openModal()">
         <div class="cardtext">
           <p class="productname">"BLITZ"</p>
           <span class="cardbio">Essential Tee</span>
-          <p class="cardprice">$39.99</p>
+          <p class="cardprice">$59.99</p>
         </div>
       </div>
 
-            <div class="productcard" data-price="39.99">
+            <div class="productcard" data-price="69.99">
         <!-- Product image that triggers modal -->
-<img src="IMG_9598.jpg" class="product-image" onclick="openModal()">
+<img src="IMG_2602.JPG" class="product-image" onclick="openModal()">
         <div class="cardtext">
           <p class="productname">"BLITZ"</p>
           <span class="cardbio">Essential Tee</span>
-          <p class="cardprice">$39.99</p>
+          <p class="cardprice">$69.99</p>
         </div>
       </div>
 
-            <div class="productcard" data-price="39.99">
+            <div class="productcard" data-price="79.99">
         <!-- Product image that triggers modal -->
-<img src="IMG_9598.jpg" class="product-image" onclick="openModal()">
+<img src="IMG_2602.JPG" class="product-image" onclick="openModal()">
         <div class="cardtext">
           <p class="productname">"BLITZ"</p>
           <span class="cardbio">Essential Tee</span>
-          <p class="cardprice">$39.99</p>
+          <p class="cardprice">$79.99</p>
         </div>
       </div>
       
+                <div class="productcard" data-price="79.99">
+        <!-- Product image that triggers modal -->
+<img src="IMG_2602.JPG" class="product-image" onclick="openModal()">
+        <div class="cardtext">
+          <p class="productname">"BLITZ"</p>
+          <span class="cardbio">Essential Tee</span>
+          <p class="cardprice">$79.99</p>
+        </div>
+      </div>  
 
 <!-- Modal structure -->
 <div id="imageModal" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeModal()">&times;</span>
-    <img id="modal-img" src="" alt="Product Image">
-    <div class="modal-description">
-      <h2>"BLITZ"</h2>
-      <p>Checkout Our Other Products</p>
-    </div>
-  </div>
+
+    <!-- LEFT: Main Image -->
+    <img id="modal-img" src="" alt="Product Image" class="main-image">
+
+    <!-- RIGHT: Details -->
+    <div class="modal-details">
+      
+      <!-- Previews -->
+      <div class="preview" id="preview">
+        <img src="IMG_2602.JPG" alt="preview" class="image-preview">
+        <img src="IMG_2602.JPG" alt="preview" class="image-preview">
+        <img src="IMG_2602.JPG" alt="preview" class="image-preview">
+      </div>
+
+      <!-- Description -->
+       <div class="description-wrapper">
+      <div class="modal-description">
+        <h2>"BLITZ"</h2>
+        <p>Standard</p>
+      </div>
+
+      <!-- Price -->
+      <div class="modal-price" id="modal-price">
+        <p>$39.99</p>
+      </div>
+
+      <!-- Sizes -->
+      <div class="modal-size" id="modal-size">
+        <button class="size">SMALL</button>
+        <button class="size">MEDIUM</button>
+        <button class="size">LARGE</button>
+      </div>
+       </div>
+    </div> <!-- .modal-details -->
 </div>
+
 <script>
   function openModal() {
     const modal = document.getElementById('imageModal');
