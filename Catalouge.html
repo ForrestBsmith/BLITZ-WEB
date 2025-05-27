@@ -9,9 +9,9 @@
   </head>
   <body>
 <!-- Navbar Start -->
-<nav class="navbar navbar-expand-xxl navbar-dark bg-black" aria-label="Seventh navbar example">
-  <a class="navbar-brand" href="http://127.0.0.1:5500/index.html#">B</a>
+<nav class="navbar navbar-expand-xxl">
     <div class="container-fluid justify-content-center">
+        <a class="navbar-brand bigb" href="index.html">B</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleXxl" aria-controls="navbarsExampleXxl" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -19,33 +19,34 @@
       <div class="collapse navbar-collapse justify-content-center" id="navbarsExampleXxl">
         <ul class="navbar-nav mb-2 mb-xl-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5500/index.html#">Home</a>
+            <a class="nav-link active" aria-current="page" href="https://forrestbsmith.github.io/BLITZ-WEB/index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="http://127.0.0.1:5500/shop.html">Shop</a>
+            <a class="nav-link" href="https://forrestbsmith.github.io/BLITZ-WEB/shop.html">Shop</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="http://127.0.0.1:5500/FW24.html#">F/W 24'</a>
+            <a class="nav-link" href="https://forrestbsmith.github.io/BLITZ-WEB/FW.html">F/W 24'</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Community</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">About Us</a></li>
-              <li><a class="dropdown-item" href="#">Pop-Up Events</a></li>
-              <li><a class="dropdown-item" href="#">Work in The Community</a></li>
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">MONTHLY DIGEST</a>
+            <ul class="dropdown-menu dropdown-center">
+              <li><a class="dropdown-item" href="#">Catalouge</a></li>
+              <li><a class="dropdown-item" href="#">Fortyfour Days</a></li>
+              <li><a class="dropdown-item" href="#">44 News</a></li>
+              <li><a class="dropdown-item" href="#">Photobooth</a></li>
+
             </ul>
           </li>
         </ul>
-  
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <!-- Shopping Cart Icon -->
-          <a href="checkout.html" class="btn btn-outline-light">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-fill" viewBox="0 0 16 16">
-                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"/>
-              </svg>
-          </a>
-        </form>
+  <!-- Cart Icon -->
+<div class="cart-container position-relative ms-3">
+  <a href="checkout.html" class="nav-link position-relative">
+    🛒
+    <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+      0
+    </span>
+  </a>
+</div>
       </div>
     </div>
   </nav>
