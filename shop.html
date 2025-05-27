@@ -64,7 +64,7 @@
   <script>
   function sortProducts() {
     const sortValue = document.getElementById('sort').value;
-    const container = document.querySelector('.mensproducts');
+    const container = document.querySelector('.section-container .mensproducts');
     const cards = Array.from(container.querySelectorAll('.productcard'));
 
     let sortedCards;
@@ -155,67 +155,8 @@
           <span class="cardbio">Essential Tee</span>
           <p class="cardprice">$79.99</p>
         </div>
-      </div>  
-
-
-      <div class="section-container">
-    <div class="header">
-      <h2>Accessories</h2>
-     </div>
-
-
-                                <!-- Cards container -->
-    <div class="mensproducts">
-      <!-- Product card 1 -->
-      <div class="productcard" data-price="39.99">
-        <!-- Product image that triggers modal -->
-<img src="IMG_2602.JPG" class="product-image" onclick="openModal()">
-        <div class="cardtext">
-          <p class="productname">"BLITZ"</p>
-          <span class="cardbio">Essential Tee</span>
-          <p class="cardprice">$39.99</p>
-        </div>
-      </div>
-
-            <div class="productcard" data-price="59.99">
-        <!-- Product image that triggers modal -->
-<img src="IMG_2602.JPG" class="product-image" onclick="openModal()">
-        <div class="cardtext">
-          <p class="productname">"BLITZ"</p>
-          <span class="cardbio">Essential Tee</span>
-          <p class="cardprice">$59.99</p>
-        </div>
-      </div>
-
-            <div class="productcard" data-price="69.99">
-        <!-- Product image that triggers modal -->
-<img src="IMG_2602.JPG" class="product-image" onclick="openModal()">
-        <div class="cardtext">
-          <p class="productname">"BLITZ"</p>
-          <span class="cardbio">Essential Tee</span>
-          <p class="cardprice">$69.99</p>
-        </div>
-      </div>
-
-            <div class="productcard" data-price="79.99">
-        <!-- Product image that triggers modal -->
-<img src="IMG_2602.JPG" class="product-image" onclick="openModal()">
-        <div class="cardtext">
-          <p class="productname">"BLITZ"</p>
-          <span class="cardbio">Essential Tee</span>
-          <p class="cardprice">$79.99</p>
-        </div>
-      </div>
-      
-                <div class="productcard" data-price="79.99">
-        <!-- Product image that triggers modal -->
-<img src="IMG_2602.JPG" class="product-image" onclick="openModal()">
-        <div class="cardtext">
-          <p class="productname">"BLITZ"</p>
-          <span class="cardbio">Essential Tee</span>
-          <p class="cardprice">$79.99</p>
-        </div>
-      </div>
+      </div> 
+      </div> 
       
 <!-- Modal structure -->
 <div id="imageModal" class="modal">
@@ -254,7 +195,7 @@
         <button class="size">LARGE</button>
       </div>
       <div class="checkoutwrapper">
-      <button class="checkout">Add To Cart</button>
+        <button class="checkout" onclick="addToCart()">Add To Cart</button>
        </div>
        </div>
     </div> <!-- .modal-details -->
@@ -305,19 +246,70 @@
   });
 </script>
 <div class="footercontainer">
-        <!--start of newsletter email-->
-<div class="newsletter text-center">
-<div class="container newslettertext">
-  <h2 class=" fw-normal lh-1">Subscrible To Our Newsletter</h2>
-  <p class="lead">Stay up to date with current releases</p>
-  <form class="d-flex text-center">
-    <input type="email" class="form-control me-2 text-center" placeholder="Enter your email" aria-label="Email">
-    <button class="btn" type="submit">Subscribe</button>
-  </form>
+  <!-- Start of newsletter email -->
+  <div class="newsletter text-center py-5">
+    <div class="container newslettertext">
+      <h2 class="fw-normal lh-1">Subscribe To Our Newsletter</h2>
+      <p class="lead">Stay up to date with current releases</p>
+      <form class="row justify-content-center">
+        <div class="col-md-6 col-sm-8 mb-2">
+          <input
+            type="email"
+            class="form-control text-center"
+            placeholder="Enter your email"
+            aria-label="Email"
+          />
+        </div>
+        <div class="col-auto">
+          <button class="btn" type="submit">Subscribe</button>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
+<script>
+function addToCart() {
+  const selectedSize = document.querySelector('.size.selected');
+  if (!selectedSize) {
+    alert("Please select a size.");
+    return;
+  }
 
-      <!-- Start Of Footer -->
-</div>
+  const product = {
+    id: "blitz-tee", // Make this dynamic later if needed
+    name: "BLITZ",
+    description: "Premium Tee",
+    price: 39.99,
+    size: selectedSize.innerText,
+    image: document.getElementById("modal-img").src,
+    quantity: 1
+  };
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  const existingIndex = cart.findIndex(item => item.id === product.id && item.size === product.size);
+  if (existingIndex > -1) {
+    cart[existingIndex].quantity += 1;
+  } else {
+    cart.push(product);
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  updateCartCount();
+}
+
+function updateCartCount() {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
+  const countElement = document.getElementById("cart-count");
+  if (countElement) {
+    countElement.textContent = totalQuantity;
+  }
+}
+
+document.addEventListener("DOMContentLoaded", updateCartCount);
+</script>
 
 </body>
 

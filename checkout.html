@@ -8,10 +8,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
+
 <!-- Navbar Start -->
-<nav class="navbar navbar-expand-xxl navbar-dark bg-black" aria-label="Seventh navbar example">
+<nav class="navbar navbar-expand-xxl">
     <div class="container-fluid justify-content-center">
-        <a class="navbar-brand" href="http://127.0.0.1:5500/index.html#">B</a>
+        <a class="navbar-brand bigb" href="index.html">B</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleXxl" aria-controls="navbarsExampleXxl" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -28,31 +29,111 @@
             <a class="nav-link" href="http://127.0.0.1:5500/FW24.html#">F/W 24'</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Community</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">About Us</a></li>
-              <li><a class="dropdown-item" href="#">Pop-Up Events</a></li>
-              <li><a class="dropdown-item" href="#">Work in The Community</a></li>
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">MONTHLY DIGEST</a>
+            <ul class="dropdown-menu dropdown-center">
+              <li><a class="dropdown-item" href="#">Community</a></li>
+              <li><a class="dropdown-item" href="#">Gallery</a></li>
+              <li><a class="dropdown-item" href="#">News</a></li>
             </ul>
           </li>
         </ul>
-  
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <!-- Shopping Cart Icon -->
-          <a href="checkout.html" class="btn btn-outline-light">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-fill" viewBox="0 0 16 16">
-                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"/>
-              </svg>
-          </a>
-        </form>
+        <ul class="navbar-nav mb-2 mb-xl-0">
+  <!-- existing nav items -->
+</ul>
+
+<!-- Cart Icon -->
+<div class="cart-container position-relative ms-3">
+  <a href="checkout.html" class="nav-link position-relative">
+    🛒
+    <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+      0
+    </span>
+  </a>
+</div>
       </div>
     </div>
   </nav>
   <!-- Navbar End -->
- 
+ <div class="heading-container">
+<h1 class="heading">
+  BLITZFORTYFOUR
+</h1>
+ </div>
 
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .cart-item { display: flex; align-items: center; margin-bottom: 20px; border-bottom: 1px solid #ccc; padding-bottom: 10px; }
+    .cart-item img { width: 100px; height: auto; margin-right: 20px; }
+    .item-details { flex-grow: 1; }
+    .remove-btn { background: #dc3545; color: white; border: none; padding: 6px 10px; cursor: pointer; border-radius: 4px; }
+    .total { font-size: 1.2em; font-weight: bold; margin-top: 30px; }
+    .empty { font-size: 1.2em; color: #666; margin-top: 20px; }
+    .checkout-btn {
+      margin-top: 30px;
+      background-color: #28a745;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
 
+  <h1>Your Cart</h1>
+  <div id="cart-container"></div>
+  <div class="total" id="cart-total"></div>
+  <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+
+  <script>
+    function renderCart() {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const container = document.getElementById("cart-container");
+      const totalContainer = document.getElementById("cart-total");
+
+      if (cart.length === 0) {
+        container.innerHTML = '<p class="empty">Your cart is empty.</p>';
+        totalContainer.textContent = '';
+        return;
+      }
+
+      let total = 0;
+      container.innerHTML = cart.map((item, index) => {
+        total += item.price * item.quantity;
+        return `
+          <div class="cart-item">
+            <img src="${item.image}" alt="${item.name}">
+            <div class="item-details">
+              <p><strong>${item.name}</strong></p>
+              <p>Size: ${item.size}</p>
+              <p>Quantity: ${item.quantity}</p>
+              <p>Price: $${(item.price * item.quantity).toFixed(2)}</p>
+            </div>
+            <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
+          </div>
+        `;
+      }).join("");
+
+      totalContainer.textContent = `Total: $${total.toFixed(2)}`;
+    }
+
+    function removeItem(index) {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      renderCart();
+    }
+
+    function checkout() {
+      alert("Proceeding to checkout (not implemented yet)");
+      // You can integrate Stripe, PayPal, or email capture here
+    }
+
+    document.addEventListener("DOMContentLoaded", renderCart);
+  </script>
+</body>
       <!-- Start Of Footer -->
       <style>
         .bd-placeholder-img {
@@ -166,7 +247,7 @@
   </div>
       <!-- End Of Footer -->
 </main>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
 
-</body>
+</script>
 </html>

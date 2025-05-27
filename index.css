@@ -154,7 +154,9 @@ box-shadow: 0 4px 8px rgba(10, 10, 10, 9.9); /* subtle shadow */
 -------------------------------------------------- */
 
 /* Carousel base class */
+.lookbook{
 
+}
 
 /* Since positioning the image, we need to help out the caption */
 
@@ -267,10 +269,10 @@ border: 1px solid #6c757d;
   height: 100%;
   background-size: cover;
   background-position: center;
-  background-image: url(Peter-Lik-Solitude-Framed-Recess-Mount_1800x.webp);
+  background-image: url(mob.jpg);
   transform: scaleX(-1);
   z-index: -1;
-  opacity: 0;
+  opacity: .225;
   transition: opacity 0.3s ease;
 }
 
@@ -294,7 +296,7 @@ border: 1px solid #6c757d;
   box-shadow: 0 4px 8px rgba(10, 10, 10, 9.9); /* subtle shadow */
   border-top: none !important;
   height: 45em !important;
-  width: 100em !important;
+  width: auto !important;
   margin-bottom: 0em;
 }
 
