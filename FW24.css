@@ -1,0 +1,74 @@
+.carousel-section {
+  text-align: center;
+  margin: 60px auto;
+  max-width: 1450px;
+  margin-top: 1em;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: calc(100% * number_of_images) !important;
+}
+
+.carousel-slide img {
+  width: 100%;
+  object-fit:scale-down;
+  max-height: 33em;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
+.carousel-label {
+  margin-top: 10px;
+}
+
+.carousel-label h2 {
+  font-size: 3rem !important;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+.carousel-label span {
+  font-size: 1rem;
+  color: #555;
+}
+
+.lookbookheading {
+  text-align: center;
+  margin-top: 2px;
+  font-size: 4.5em;
+  font-weight: 800;
+  font-style: oblique;
+  letter-spacing: 10px !important;
+  
+}
+
+.lookbooktitle {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 400;
+  font-style: italic;
+letter-spacing: 10px !important;
+}

@@ -20,28 +20,25 @@
       <div class="collapse navbar-collapse justify-content-center" id="navbarsExampleXxl">
         <ul class="navbar-nav mb-2 mb-xl-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5500/index.html#">Home</a>
+            <a class="nav-link active" aria-current="page" href="https://legendary-space-spork-4j7xpxvq76x4cjq75-5501.app.github.dev/index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="http://127.0.0.1:5500/shop.html">Shop</a>
+            <a class="nav-link" href="https://legendary-space-spork-4j7xpxvq76x4cjq75-5501.app.github.dev/shop.html">Shop</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="http://127.0.0.1:5500/FW24.html#">F/W 24'</a>
+            <a class="nav-link" href="https://legendary-space-spork-4j7xpxvq76x4cjq75-5501.app.github.dev/FW24.html">F/W 24'</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">MONTHLY DIGEST</a>
             <ul class="dropdown-menu dropdown-center">
-              <li><a class="dropdown-item" href="#">Community</a></li>
-              <li><a class="dropdown-item" href="#">Gallery</a></li>
-              <li><a class="dropdown-item" href="#">News</a></li>
+              <li><a class="dropdown-item" href="#">Catalouge</a></li>
+              <li><a class="dropdown-item" href="#">Fortyfour Days</a></li>
+              <li><a class="dropdown-item" href="#">44 News</a></li>
+              <li><a class="dropdown-item" href="#">Photobooth</a></li>
             </ul>
           </li>
         </ul>
-        <ul class="navbar-nav mb-2 mb-xl-0">
-  <!-- existing nav items -->
-</ul>
-
-<!-- Cart Icon -->
+  <!-- Cart Icon -->
 <div class="cart-container position-relative ms-3">
   <a href="checkout.html" class="nav-link position-relative">
     🛒
@@ -107,56 +104,46 @@
                                    <!-- Cards container -->
     <div class="mensproducts">
       <!-- Product card 1 -->
-      <div class="productcard" data-price="39.99">
+    <div class="productcard" data-price="39.99" data-name='"BLITZ"' data-bio="Essential Tee" data-preview="IMG_2602.JPG,IMG_2345.JPG,IMG_2679.JPG">   
         <!-- Product image that triggers modal -->
-<img src="IMG_2602.JPG" class="product-image" onclick="openModal()">
+    <img src="IMG_2602.JPG" class="product-image" onclick="openModal(this)">
         <div class="cardtext">
-          <p class="productname">"BLITZ"</p>
+          <p class="productname">BLITZ</p>
           <span class="cardbio">Essential Tee</span>
           <p class="cardprice">$39.99</p>
         </div>
       </div>
 
-            <div class="productcard" data-price="59.99">
-        <!-- Product image that triggers modal -->
-<img src="IMG_2602.JPG" class="product-image" onclick="openModal()">
+<div class="productcard" data-price="59.99" data-name='"44"' data-bio="Essential Tee" data-preview="IMG_9609.jpg,IMG_9596.jpg,IMG_9589.jpg">
+      <!-- Product image that triggers modal -->
+<img src="IMG_9588.jpg" class="product-image" onclick="openModal(this)">
         <div class="cardtext">
-          <p class="productname">"BLITZ"</p>
+          <p class="productname">44</p>
           <span class="cardbio">Essential Tee</span>
           <p class="cardprice">$59.99</p>
         </div>
       </div>
 
-            <div class="productcard" data-price="69.99">
-        <!-- Product image that triggers modal -->
-<img src="IMG_2602.JPG" class="product-image" onclick="openModal()">
+<div class="productcard" data-price="69.99" data-name='"BAG"' data-bio="ONE SIZE">
+      <!-- Product image that triggers modal -->
+<img src="bag.jpg" class="product-image" onclick="openModal(this)">
         <div class="cardtext">
-          <p class="productname">"BLITZ"</p>
-          <span class="cardbio">Essential Tee</span>
+          <p class="productname">BAG</p>
+          <span class="cardbio">Carry-on</span>
           <p class="cardprice">$69.99</p>
         </div>
       </div>
 
-            <div class="productcard" data-price="79.99">
-        <!-- Product image that triggers modal -->
-<img src="IMG_2602.JPG" class="product-image" onclick="openModal()">
+      <div class="productcard" data-price="29.99" data-name='"44"' data-bio="LARGE CAP" data-preview="">
+      <!-- Product image that triggers modal -->
+<img src="dadhat.jpg" class="product-image" onclick="openModal(this)">
         <div class="cardtext">
-          <p class="productname">"BLITZ"</p>
-          <span class="cardbio">Essential Tee</span>
-          <p class="cardprice">$79.99</p>
+          <p class="productname">44</p>
+          <span class="cardbio">Dad Hat</span>
+          <p class="cardprice">$29.99</p>
         </div>
       </div>
-      
-                <div class="productcard" data-price="79.99">
-        <!-- Product image that triggers modal -->
-<img src="IMG_2602.JPG" class="product-image" onclick="openModal()">
-        <div class="cardtext">
-          <p class="productname">"BLITZ"</p>
-          <span class="cardbio">Essential Tee</span>
-          <p class="cardprice">$79.99</p>
-        </div>
-      </div> 
-      </div> 
+  </div> 
       
 <!-- Modal structure -->
 <div id="imageModal" class="modal">
@@ -171,16 +158,16 @@
       
       <!-- Previews -->
       <div class="preview" id="preview">
-        <img src="IMG_9588.jpg" alt="preview" class="image-preview">
-        <img src="IMG_9596.jpg" alt="preview" class="image-preview">
-        <img src="IMG_9589.jpg" alt="preview" class="image-preview">
+        <img src="IMG_2345.JPG" alt="preview" class="image-preview">
+        <img src="IMG_2602.JPG" alt="preview" class="image-preview">
+        <img src="IMG_2679.JPG" alt="preview" class="image-preview">
       </div>
 
       <!-- Description -->
        <div class="description-wrapper">
       <div class="modal-description">
-        <h2>"BLITZ"</h2>
-        <p>Premium Tee</p>
+        <h2 id="modal-name">"BLITZ"</h2>
+        <p id="modal-bio">Premium Tee</p>
       </div>
 
       <!-- Price -->
@@ -198,9 +185,12 @@
         <button class="checkout" onclick="addToCart()">Add To Cart</button>
        </div>
        </div>
-    </div> <!-- .modal-details -->
+    </div> 
+    <!-- .modal-details -->
 </div>
 </div>
+
+
 <script>
   const sizeButtons = document.querySelectorAll('#modal-size .size');
 
@@ -213,26 +203,50 @@
 </script>
 
 <script>
-  function openModal() {
-    const modal = document.getElementById('imageModal');
-    const modalImg = document.getElementById('modal-img');
-    const clickedImg = event.target;
+  function openModal(imgElement) {
+  const modal = document.getElementById('imageModal');
+  const modalImg = document.getElementById('modal-img');
+  const modalPrice = document.getElementById('modal-price').querySelector('p');
+  const modalName = document.getElementById('modal-name');
+  const modalBio = document.getElementById('modal-bio');
+  const previewContainer = document.getElementById('preview');
 
-    modal.style.display = 'flex';
-    modalImg.src = clickedImg.src;
-  }
+  // Get parent product card
+  const productCard = imgElement.closest('.productcard');
 
-  function closeModal() {
-    document.getElementById('imageModal').style.display = 'none';
-  }
+  // Get values from data attributes
+  const price = productCard.getAttribute('data-price');
+  const name = productCard.getAttribute('data-name');
+  const bio = productCard.getAttribute('data-bio');
+  const previews = productCard.getAttribute('data-preview');
 
-  // Optional: Close when clicking outside the modal content
-  window.onclick = function(event) {
-    const modal = document.getElementById('imageModal');
-    if (event.target === modal) {
-      modal.style.display = "none";
-    }
+
+  // Populate modal content
+  modal.style.display = 'flex';
+  modalImg.src = imgElement.src;
+  modalPrice.textContent = `$${price}`;
+  modalName.textContent = name.replace(/"/g, '');
+  modalBio.textContent = bio;
+
+   // Clear old previews
+  previewContainer.innerHTML = '';
+
+   // Add new previews
+  if (previews) {
+    const previewArray = previews.split(',');
+    previewArray.forEach(src => {
+      const img = document.createElement('img');
+      img.src = src.trim();
+      img.classList.add('image-preview');
+      img.alt = 'preview';
+      img.addEventListener('click', () => {
+        modalImg.src = img.src;
+      });
+      previewContainer.appendChild(img);
+    });
   }
+}
+
    // Wait until DOM is fully loaded
   document.addEventListener("DOMContentLoaded", function () {
     const mainImage = document.getElementById("modal-img"); // your main image
@@ -245,6 +259,27 @@
     });
   });
 </script>
+
+<script>
+  // Close modal when clicking outside the modal content
+  window.addEventListener("click", function(event) {
+    const modal = document.getElementById("imageModal");
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
+
+  function closeModal() {
+    const modal = document.getElementById('imageModal');
+    modal.style.display = 'none';
+    
+    // Optionally, reset selected size
+    const sizeButtons = document.querySelectorAll('.size');
+    sizeButtons.forEach(btn => btn.classList.remove('selected'));
+  }
+</script>
+
+
 <div class="footercontainer">
   <!-- Start of newsletter email -->
   <div class="newsletter text-center py-5">
@@ -275,19 +310,28 @@ function addToCart() {
     return;
   }
 
+  const modalImgSrc = document.getElementById("modal-img").src;
+  const productName = document.getElementById("modal-name").textContent.trim();
+  const productDescription = document.getElementById("modal-bio").textContent.trim();
+  const productPriceText = document.getElementById("modal-price").textContent.replace('$', '');
+  const price = parseFloat(productPriceText);
+
+  // Generate a unique ID using name + size
+  const productId = productName.toLowerCase().replace(/[^a-z0-9]/g, '-') + '-' + selectedSize.innerText.toLowerCase();
+
   const product = {
-    id: "blitz-tee", // Make this dynamic later if needed
-    name: "BLITZ",
-    description: "Premium Tee",
-    price: 39.99,
+    id: productId,
+    name: productName,
+    description: productDescription,
+    price: price,
     size: selectedSize.innerText,
-    image: document.getElementById("modal-img").src,
+    image: modalImgSrc,
     quantity: 1
   };
 
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-  const existingIndex = cart.findIndex(item => item.id === product.id && item.size === product.size);
+  const existingIndex = cart.findIndex(item => item.id === product.id);
   if (existingIndex > -1) {
     cart[existingIndex].quantity += 1;
   } else {
@@ -295,10 +339,12 @@ function addToCart() {
   }
 
   localStorage.setItem("cart", JSON.stringify(cart));
-
+  alert("Added to cart!");
   updateCartCount();
 }
+</script>
 
+<script>
 function updateCartCount() {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
   const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
@@ -307,10 +353,8 @@ function updateCartCount() {
     countElement.textContent = totalQuantity;
   }
 }
-
 document.addEventListener("DOMContentLoaded", updateCartCount);
 </script>
-
 </body>
 
 
