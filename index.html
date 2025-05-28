@@ -308,7 +308,7 @@
 
       <div class="row align-items-start g-0 digest">
         <!-- First Box -->
-        <div class="col-md-6 news">
+        <div class="col-md-6 news" id="44news">
           <div class="hover-box left-box p-4 h-100">
             <h2 class="fw-normal lh-1">44 NEWS</h2>
             <p class="lead">Monthly Edition</p>
@@ -316,7 +316,7 @@
         </div>
       
         <!-- Second Box -->
-        <div class="col-md-6 analog">
+        <div class="col-md-6 analog" id="Analog">
           <div class="hover-box p-4 h-100">
             <h2 class="fw-normal lh-1">FORTYFOUR DAYS</h2>
             <p class="lead">An analog Journey</p>
@@ -327,7 +327,7 @@
 
             <div class="row align-items-start g-0 digest">
         <!-- First Box -->
-        <div class="col-md-6 news">
+        <div class="col-md-6 news" id="Catalouge">
           <div class="hover-box left-box p-4 h-100">
             <h2 class="fw-normal lh-1">Catalouge 25'</h2>
             <p class="lead">Monthly Edition</p>
@@ -335,7 +335,7 @@
         </div>
       
         <!-- Second Box -->
-        <div class="col-md-6 analog">
+        <div class="col-md-6 analog" id="Photobooth">
           <div class="hover-box p-4 h-100">
             <h2 class="fw-normal lh-1">PhotoBooth</h2>
             <p class="lead">An Collection of events</p>
@@ -343,6 +343,33 @@
         </div>
       </div>
       <!-- END THE FEATURETTES -->
+<script>
+  document.getElementById('44news').addEventListener('click', function () {
+    window.location.href = '44 News.html';
+  });
+  // Optional: Add a pointer cursor for better UX
+  document.getElementById('44news').style.cursor = 'pointer';
+
+    document.getElementById('Catalouge').addEventListener('click', function () {
+    window.location.href = 'Catalouge.html';
+  });
+  // Optional: Add a pointer cursor for better UX
+  document.getElementById('Catalouge').style.cursor = 'pointer';     
+  
+  document.getElementById('Photobooth').addEventListener('click', function () {
+    window.location.href = 'photobooth.html';
+  });
+  // Optional: Add a pointer cursor for better UX
+  document.getElementById('Photobooth').style.cursor = 'pointer';
+
+    document.getElementById('Analog').addEventListener('click', function () {
+    window.location.href = 'Analog.html';
+  });
+  // Optional: Add a pointer cursor for better UX
+  document.getElementById('Analog').style.cursor = 'pointer';
+</script>
+
+
 
       <!--start of newsletter email-->
 <div class="newsletter text-center">
