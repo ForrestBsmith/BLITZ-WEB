@@ -26,6 +26,11 @@ img {
   backface-visibility: hidden;
 }
 
+a.dropdown-item:focus {
+  outline: 2px solid #999; /* or your brand color */
+  outline-offset: 2px;
+  background-color:transparent;
+}
 
 /* HEADER CUSTOM 
 ----------------------------------------------------*/
