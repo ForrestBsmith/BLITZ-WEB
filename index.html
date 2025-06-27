@@ -12,12 +12,11 @@
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-xxl">
     <div class="container-fluid justify-content-center">
-        <a class="navbar-brand bigb" href="index.html">B</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleXxl" aria-controls="navbarsExampleXxl" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
   
-      <div class="collapse navbar-collapse justify-content-center" id="navbarsExampleXxl">
+      <div class="collapse navbar-collapse justify-content-center" id="navbarsExample">
         <ul class="navbar-nav mb-2 mb-xl-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="https://forrestbsmith.github.io/BLITZ-WEB/index.html">Home</a>
@@ -71,35 +70,35 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active text-center">
-      <img src="Pebble-Beach2.jpg" class="d-block w-100" alt="first slide">
+      <img src="Pebble-Beach2.jpg" class="d-block w-100 carouselimage" alt="first slide">
       <div class="carousel-text p-4">
-        <h1>Stay up to date with the latest releases</h1>
-        <p class="opacity-75">Join our E-mail list to stay up to date with upcoming releases and offers</p>
+        <h1 class="carouselheading">E-mail Newsletter</h1>
+        <p class="opacity-75 carouselspan">Join our E-mail list to stay up to date.</p>
         <p><a class="btn btn-lg btn" href="#">Sign up today</a></p>
       </div>
     </div>
     <div class="carousel-item text-center">
-      <img src="traffic.jpg" class="d-block w-100" alt="second slide">
+      <img src="traffic.jpg" class="d-block w-100 carouselimage" alt="second slide">
       <div class="carousel-text p-4 texthead">
-        <h1>S/S B44 24'</h1>
-        <p>Browse Collection</p>
+        <h1 class="carouselheading">S/S B44 24'</h1>
+        <p class="opacity-75 carouselspan">Browse Collection</p>
         <p><a class="btn btn-lg btn" href="#">Shop Now</a></p>
       </div>
     </div>
     <div class="carousel-item text-center">
-      <img src="Pebble-Beach2.jpg" class="d-block w-100" alt="third slide">
+      <img src="Pebble-Beach2.jpg" class="d-block w-100 carouselimage" alt="third slide">
       <div class="carousel-text p-4">
-        <h1>F/W LOOKBOOK 24'</h1>
-        <p>Upcoming Event Details</p>
+        <h1 class="carouselheading">F/W LOOKBOOK 24'</h1>
+        <p class="opacity-75 carouselspan">Upcoming Event Details</p>
         <p><a class="btn btn-lg btn" href="#">Browse gallery</a></p>
       </div>
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+  <button class="carousel-control-prev visually-hidden" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+  <button class="carousel-control-next visually-hidden" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
@@ -114,8 +113,6 @@
         <div class="col-md-7">
           <h2 class="featurette-heading fw-normal lh-1">New Releases <span class="text-body-secondary"></span></h2>
           <p class="lead">BlitzFortyFour Essential Tee</p>
-          <p class="lead"></p>
-
         </div>
 
         <div class="col-md-5 mainimagecontainer">
@@ -123,9 +120,10 @@
         </div>
       </div>
 
-     <div class="row fw featurette" id="fwContainer">
-  <div class="col-md-7 fwtext">
-    <h2 class="featurette-heading fw-normal lh-1">
+
+     <div class="row fw" id="fwContainer">
+  <div class="col-md-7">
+    <h2 class="fw-normal lh-1 fwtext">
       F/W 25' Lookbook
     </h2>
     <p class="lead">Browse Gallery</p>
@@ -416,11 +414,7 @@
           user-select: none;
         }
   
-        @media (min-width: 768px) {
-          .bd-placeholder-img-lg {
-            font-size: 3.5rem;
-          }
-        }
+ 
   
         .b-example-divider {
           width: 100%;
