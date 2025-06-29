@@ -34,26 +34,9 @@
         <li class="nav-item">
           <a class="nav-link" href="https://forrestbsmith.github.io/BLITZ-WEB/FW24.html">F/W 24'</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">MONTHLY DIGEST</a>
-          <ul class="dropdown-menu dropdown-center">
-            <li><a class="dropdown-item" href="Catalouge.html">Catalouge</a></li>
-            <li><a class="dropdown-item" href="Analog.html">Fortyfour Days</a></li>
-            <li><a class="dropdown-item" href="44 News.html">44 News</a></li>
-            <li><a class="dropdown-item" href="photobooth.html">Photobooth</a></li>
-          </ul>
-        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://forrestbsmith.github.io/BLITZ-WEB/44 News.html">44 News</a>   
       </ul>
-
-      <!-- Cart Icon -->
-      <div class="cart-container position-relative ms-3">
-        <a href="checkout.html" class="nav-link position-relative">
-          🛒
-          <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-            0
-          </span>
-        </a>
-      </div>
     </div>
   </div>
 </nav>
@@ -122,8 +105,8 @@
 
 
      <div class="row fw" id="fwContainer">
-  <div class="col-md-7">
-    <h2 class="fw-normal lh-1 fwtext">
+  <div class="col-md-7 fwtext">
+    <h2 class="fw-normal lh-1">
       F/W 25' Lookbook
     </h2>
     <p class="lead">Browse Gallery</p>
@@ -163,7 +146,6 @@
           width: 100%;
           padding-top: 125%; /* 4:5 aspect ratio */
           overflow: hidden;
-          background-color: #f9f9f9;
         }
       
         .product-grid .product-image-container img {
@@ -182,11 +164,13 @@
           font-weight: 500;
           font-size: 1rem;
           text-align: left;
+                    color: #000000;
+
         }
       
         .product-grid .product-color {
           font-size: 0.875rem;
-          color: #666;
+          color: #000000;
           text-align: left;
         }
       
@@ -195,6 +179,8 @@
           font-weight: bold;
           margin-top: 0.25rem;
           text-align: left;
+                    color: #000000;
+
         }
 
         .product-card {
@@ -308,7 +294,7 @@
         <!-- First Box -->
         <div class="col-md-6 news" id="44news">
           <div class="hover-box left-box p-4 h-100">
-            <h2 class="fw-normal lh-1">44 NEWS</h2>
+            <h2 class="leadhead fw-normal lh-1">44 NEWS</h2>
             <p class="lead">Monthly Edition</p>
           </div>
         </div>
@@ -316,7 +302,7 @@
         <!-- Second Box -->
         <div class="col-md-6 analog" id="Analog">
           <div class="hover-box p-4 h-100">
-            <h2 class="fw-normal lh-1">FORTYFOUR DAYS</h2>
+            <h2 class="leadhead fw-normal lh-1">FORTYFOUR DAYS</h2>
             <p class="lead">An analog Journey</p>
           </div>
         </div>
@@ -327,7 +313,7 @@
         <!-- First Box -->
         <div class="col-md-6 news" id="Catalouge">
           <div class="hover-box left-box p-4 h-100">
-            <h2 class="fw-normal lh-1">Catalouge 25'</h2>
+            <h2 class="leadhead fw-normal lh-1">Catalouge 25'</h2>
             <p class="lead">Monthly Edition</p>
           </div>
         </div>
@@ -335,7 +321,7 @@
         <!-- Second Box -->
         <div class="col-md-6 analog" id="Photobooth">
           <div class="hover-box p-4 h-100">
-            <h2 class="fw-normal lh-1">PhotoBooth</h2>
+            <h2 class="leadhead fw-normal lh-1">PhotoBooth</h2>
             <p class="lead">An Collection of events</p>
           </div>
         </div>
@@ -372,10 +358,9 @@
       <!--start of newsletter email-->
 <div class="newsletter text-center">
 <div class="container newslettertext">
-  <h2 class=" fw-normal lh-1">Subscrible To Our Newsletter</h2>
-  <p class="lead">Stay up to date with current releases</p>
+  <h2 class=" fw-normal lh-1 leadhead1">Subscrible To Our Newsletter</h2>
   <form class="d-flex text-center">
-    <input type="email" class="form-control me-2 text-center" placeholder="Enter your email" aria-label="Email">
+    <input type="email" class="form-control me-2 text-center" placeholder="E-mail" aria-label="Email">
     <button class="btn" type="submit">Subscribe</button>
   </form>
 </div>
@@ -385,21 +370,21 @@
   <div class="footer-column">
     <ul class="footer-list-container">
       <li><h2>Contact Us</h2></li>
-      <li>Email Us</li>
+      <li class="service">Email Us</li>
     </ul>
   </div>
   <div class="footer-column">
     <ul class="footer-list-container">
       <li><h2>Customer Service</h2></li>
-      <li>Shipping</li>
-      <li>Returns</li>
-      <li>Your Orders</li>
+      <li class="service">Shipping</li>
+      <li class="service">Returns</li>
+      <li class="service">Your Orders</li>
     </ul>
   </div>
   <div class="footer-column">
     <ul class="footer-list-container">
       <li><h2>About</h2></li>
-      <li>Our Purpose</li>
+      <li class="service">Our Purpose</li>
     </ul>
   </div>
 </footer>
@@ -419,7 +404,7 @@
         .b-example-divider {
           width: 100%;
           height: 3rem;
-          background-color: rgba(0, 0, 0, .1);
+          background-color: rgb(255, 255, 255);
           border: solid rgba(0, 0, 0, .15);
           border-width: 1px 0;
           box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
