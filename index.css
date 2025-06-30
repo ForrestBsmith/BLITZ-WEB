@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  background-color: #49494952 !important;
+  background-color: #000000 !important;
   background-size:cover !important;
   width: 100% !important;
 }
@@ -83,6 +83,11 @@ svg{
   align-content: center !important;
 }
 
+.navbar-expand-xxl {
+  flex-wrap: nowrap; /* Prevents the navbar from wrapping */
+  padding: 0 !important; /* Removes padding */ 
+}
+
 .navbar-brand{
 font-weight: 800;
 font-size: .75em !important;
@@ -105,13 +110,13 @@ color: white !important;
 
 div.container-fluid{
   max-height: 3.5em;
+  background-color: black !important;
 }
 
 .navbar{
-  margin-bottom: 2.5em;
   display: flex;
   justify-content: end;
-  height: .95em;
+  height: auto !important;
 }
 
 .navbar-toggler-icon {
@@ -124,16 +129,16 @@ div.container-fluid{
 }
 
 .navbar-collapse {
-  background-color: black !important;
   z-index: 1000; /* Ensures the navbar is above other content */
-  position: relative; /* Ensures the dropdown menu is positioned relative to its parent */
 }
 
 .collapse{
   position: absolute; /* Ensures the collapse is positioned relative to its parent */
-  top: 350%; /* Positions it below the navbar */
   left: 0; /* Aligns it to the left */
+  top: 100%; /* Positions it below the navbar */
+  background-color: black !important; /* Sets a background color for the collapse */
   width: 100%; /* Ensures it takes the full width of the navbar */
+  text-decoration: underline;
 }
 
 .mycarousel{
@@ -202,6 +207,13 @@ a{
 .carousel-item{
   margin-top: 1em !important;
 }
+
+.carousel-inner {
+  position: relative; /* Ensures the carousel is positioned relative to its parent */
+  width: 100% !important; /* Ensures the carousel takes the full width of its container */
+  height: auto !important; /* Allows the carousel to adjust its height based on content */
+
+}
 /* Carousel base class */
 
 
@@ -231,11 +243,11 @@ a{
 ------------------------- */
 /*featured images*/
 .mainimagecontainer{
-  height: 16em !important;
+  height: 25em !important;
 }
 
 .mainimage{
-  height: 16em !important;
+  height: 25em !important;
 }
 
 /*featured images*/
@@ -258,19 +270,17 @@ a{
 
 /* Thin out the marketing headings */
 /* rtl:begin:remove */
-.featurette-heading {
-  letter-spacing: -.05rem;
-}
+
 
 .featurette-heading {
-  font-size: 2rem !important; /* Change this value to make the heading larger */
+  font-size: 3rem !important; /* Change this value to make the heading larger */
   font-style: italic !important;
   font-weight: 900 !important;
-  margin-top: .25em;
+  margin: 0em;
 }
 
 .featurette p.lead{
-  font-size: 1.25rem !important; /* Change this value to make the paragraph text larger */
+  font-size: 1.75rem !important; /* Change this value to make the paragraph text larger */
   font-style: oblique !important;
   font-weight: 400 !important;
   z-index: 1000; /* Ensures the text is above other content */
@@ -284,7 +294,7 @@ a{
 
 /* Apply hover background ONLY to rows NOT inside a .featurette section */
 .hover-box:hover {
-  background-color: rgba(245, 245, 245, 0.199); /* light gray on hover */
+  background-color: rgba(245, 245, 245, 0.199) !important; /* light gray on hover */
   box-shadow: 0 4px 8px rgba(10, 10, 10, 9.9); /* subtle shadow */
 }
 
@@ -300,15 +310,12 @@ border: 1px solid #6c757d;
 }
 /* Cancel it inside your shopping section */
 
-.fw {
-  position: relative;
-  overflow: hidden;
-  transition: height 0.3s ease;
-  height: 6.95em !important;
-  
-}
 
 .fw.active {
+}
+
+.h2, h2 {
+    font-size: 1.75em !important;
 }
 
 .fw::before {
@@ -331,16 +338,21 @@ border: 1px solid #6c757d;
   opacity: 1;
 }
 
-.fwtext {
-  font-size: 1.25em;
-  font-weight: 800;
+.fw {
   color: #ffffff !important;
+  height: auto;
   position: relative;
-  top: 1em;
-  margin: .75em;
-  height: .1em !important;
   box-shadow: rgba(0, 0, 0, 0.486) 0.01em 0em 0.5em;
   text-shadow: black 0.05em 0.05em 0.05em;
+  margin: .75em;
+  margin-bottom: 0em ;
+  padding: 1em;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+#fwContainer{
+  font-size: 1.25em !important;
 }
 
 
@@ -348,10 +360,17 @@ border: 1px solid #6c757d;
   background-color: rgb(255, 255, 255); /* light gray on hover */
   box-shadow: 0 4px 8px rgba(10, 10, 10, 9.9); /* subtle shadow */
   border-top: none !important;
-  height: 120em !important;
+  height: auto !important;
   margin-bottom: 0em;
   width: 100% !important;
 }
+
+.shopheader{
+font-size: 2.8em !important;
+font-weight:900 !important;
+font-style: oblique !important; 
+}
+
 
 .see-more-link {
   font-size: 0.4rem;
@@ -439,7 +458,7 @@ form{
   max-width: auto;
   position: relative;
   margin-bottom: 1em;
-  margin-top: 1.3em ;
+  margin-top: 1.5em ;
   z-index: 1000; /* Ensures the form is above other content */
 }
 
@@ -447,8 +466,9 @@ form{
   font-size: 1.25em !important;
   font-style: oblique !important;
   font-weight: 800 !important;
-  margin-top: .25em;
   margin-bottom: 0em;
+  position: relative; /* Ensures the text is positioned relative to its parent */
+  top: .55em;
 }
 
 form input[type="email"] {
@@ -472,11 +492,13 @@ form input[type="email"] {
 
 .newslettertext{
   position: relative;
-  color: white !important;
+  color: rgb(255, 255, 255) !important;
+  height: 7em !important;
 }
 
 .newsletter{
-  margin-top: 1.75em !important;
+  height: auto;
+  background-color: #000;
 }
 
 .footer-container {
