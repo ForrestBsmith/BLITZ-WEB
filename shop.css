@@ -1,8 +1,6 @@
 /* CSS for the shop page */
 
-h1{
-  margin-bottom: 8px !important;
-}
+
  
 
 /*PRODUCT CXARDS START*/  
@@ -27,6 +25,17 @@ body {
   margin-top: 3em;
   margin-bottom: .5em;
   margin-right: 50%;
+}
+
+
+
+ .shoppageheader{
+  font-size: 1.5em !important;
+  margin: 0 !important;
+  font-weight: 600 !important;
+  font-family: 'Poppins', sans-serif !important;
+  margin-left: 1em !important;
+  width: 100%;
 }
 
 /* Flex row of cards */
@@ -106,14 +115,13 @@ body {
   z-index: 1000;
   left: 0;
   top: 0;
-  width: 100vw;
-  height: 100vh;
+
   background: rgba(0, 0, 0, 0.6);
 }
 
 .modal-content {
   display: flex;
-  flex-direction: row !important;
+  flex-direction: column !important;
   background: #fff;
   width: 50% !important;
   max-width: 85rem;
@@ -126,17 +134,21 @@ body {
 }
 
 .size.selected {
-    background-color: black;
+    background-color: black !important;
     color: white;
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: 600;
+  font-size: .55em;
+  cursor: pointer;
+  border-radius: 5px;
   }
 
 .main-image {
-  width: 250px;
-  height: auto;
-  border-radius: 8px;
+  width: 185px;
+  height: 210px;
   object-fit: cover;
-  align-self: flex-start; /* NEW */
+  align-self: center;
 }
 
 .modal-details {
@@ -148,17 +160,17 @@ body {
 
 /* Optional spacing between sections */
 .modal-details > *:not(:last-child) {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .preview {
   display: flex;
-  gap: 10px;
+  gap: 20px;
 }
 
 .image-preview {
-  height: 5em;
-  border-radius: 4px;
+  height: 50px;
+  border-radius: ;
   cursor: pointer;
   transition: box-shadow 0.3s ease;
 }
@@ -174,28 +186,53 @@ body {
 }
 
 .modal-price {
-  font-size: 2em;
+  font-size: .90em;
   font-weight: 800;
 }
 
+.modalprice{
+margin-bottom: .4em;
+}
+
 .checkoutwrapper{
-  justify-content: flex-end !important;
+  justify-content: center !important;
   display: flex;
+  width: 100%;
+  height: auto;
+  margin-top: .45em;
+}
+
+.checkout{
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: .9em;
+  font-weight: bold;
+  cursor: pointer;
+  height: 25px;
+  width: 125px;
+  justify-self: center !important;
+  margin: 0 !important;
 }
 
 .modal-size {
   display: flex;
+  justify-content: center !important;
   gap: 10px;
 }
 
 .size {
-  padding: 8px 12px;
   font-weight: 600;
+  font-size: .55em;
   cursor: pointer;
   border: none;
   border-radius: 5px;
   background-color: #eee;
+  width: 100%;
+  height: auto;
 }
+
 
 .size:hover {
   background-color: #ddd;
