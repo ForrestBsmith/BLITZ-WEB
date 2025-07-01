@@ -20,7 +20,7 @@
 .carousel-slide img {
   width: 100%;
   object-fit:scale-down;
-  max-height: 33em;
+  max-height: 23em;
 }
 
 .carousel-btn {
@@ -58,6 +58,7 @@
 }
 
 .carousel-label span {
-  font-size: 1.5rem;
+  font-size: 1rem;
+  width: 100%;
 }
 

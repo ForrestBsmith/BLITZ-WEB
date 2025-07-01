@@ -170,7 +170,6 @@ body {
 
 .image-preview {
   height: 50px;
-  border-radius: ;
   cursor: pointer;
   transition: box-shadow 0.3s ease;
 }
