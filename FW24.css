@@ -37,39 +37,27 @@
   border-radius: 50%;
 }
 
-.carousel-btn.prev { left: 10px; }
-.carousel-btn.next { right: 10px; }
+.carousel-btn.prev { 
+  left: 10px; 
+  
+}
+
+.carousel-btn.next { 
+  right: 10px; 
+}
 
 .carousel-label {
   margin-top: 10px;
+  color:white
 }
 
 .carousel-label h2 {
-  font-size: 3rem !important;
+  font-size: 2.125rem !important;
   letter-spacing: 2px;
   margin-bottom: 5px;
 }
 
 .carousel-label span {
-  font-size: 1rem;
-  color: #555;
-}
-
-.lookbookheading {
-  text-align: center;
-  margin-top: 2px;
-  font-size: 4.5em;
-  font-weight: 800;
-  font-style: oblique;
-  letter-spacing: 10px !important;
-  
-}
-
-.lookbooktitle {
-  text-align: center;
-  font-size: 2.5em;
-  font-weight: 400;
-  font-style: italic;
-letter-spacing: 10px !important;
+  font-size: 1.5rem;
 }
 

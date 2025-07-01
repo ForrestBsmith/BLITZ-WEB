@@ -10,53 +10,36 @@
   </head>
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-xxl">
-    <div class="container-fluid justify-content-center">
-        <a class="navbar-brand bigb" href="index.html">B</a>
+  <div class="container-fluid mt-0">
+    <!-- Top Row: Heading + Toggler -->
+    <div class="w-100 d-flex justify-content-between align-items-center">
+      <div class="heading-container m-2">
+        <h1 class="heading mb-0">BLITZFORTYFOUR</h1>
+      </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleXxl" aria-controls="navbarsExampleXxl" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-  
-      <div class="collapse navbar-collapse justify-content-center" id="navbarsExampleXxl">
-        <ul class="navbar-nav mb-2 mb-xl-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="https://forrestbsmith.github.io/BLITZ-WEB/index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://forrestbsmith.github.io/BLITZ-WEB/shop.html">Shop</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://forrestbsmith.github.io/BLITZ-WEB/FW24.html">F/W 24'</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">MONTHLY DIGEST</a>
-            <ul class="dropdown-menu dropdown-center">
-              <li><a class="dropdown-item" href="Catalouge.html">Catalouge</a></li>
-              <li><a class="dropdown-item" href="Analog.html">Fortyfour Days</a></li>
-              <li><a class="dropdown-item" href="44 News.html">44 News</a></li>
-              <li><a class="dropdown-item" href="photobooth.html">Photobooth</a></li>
-
-            </ul>
-          </li>
-        </ul>
-  <!-- Cart Icon -->
-<div class="cart-container position-relative ms-3">
-  <a href="checkout.html" class="nav-link position-relative">
-    🛒
-    <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-      0
-    </span>
-  </a>
-</div>
-      </div>
     </div>
-  </nav>
-  <!-- Navbar End -->
 
-<div class="heading-container">
-<h1 class="heading">
-  BLITZFORTYFOUR
-</h1>
- </div>
+    <!-- Collapsible Nav Links -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarsExampleXxl">
+      <ul class="navbar-nav mb-2 mb-xl-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="https://forrestbsmith.github.io/BLITZ-WEB/index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://forrestbsmith.github.io/BLITZ-WEB/shop.html">Shop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://forrestbsmith.github.io/BLITZ-WEB/FW24.html">F/W 24'</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://forrestbsmith.github.io/BLITZ-WEB/44 News.html">44 News</a>   
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Navbar End -->
  
 <body>
 <!-- Carousel Section -->
@@ -72,13 +55,13 @@
       <img src="IMG_2679.JPG" alt="Slide 6">
     </div>
     <!-- Buttons -->
-    <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
-    <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
+    <button class="carousel-btn visually-hidden prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="carousel-btn visually-hidden next" onclick="moveSlide(1)">&#10095;</button>
   </div>
 
   <!-- Title and Subtitle -->
   <div class="carousel-label">
-    <h2 class="lookbookheading">FW24</h2>
+    <h2 class="lookbookheading">BLITZ44</h2>
     <span class="lookbooktitle">Fall/Winter 2024</span>
   </div>
 </div>
@@ -133,36 +116,41 @@ function updateCartCount() {
 document.addEventListener("DOMContentLoaded", updateCartCount);
 </script>
   </body>
-   <!--start of newsletter email-->
+      <!--start of newsletter email-->
 <div class="newsletter text-center">
 <div class="container newslettertext">
-  <h2 class=" fw-normal lh-1">Subscrible To Our Newsletter</h2>
-  <p class="lead">Stay up to date with current releases</p>
+  <h2 class=" fw-normal lh-1 leadhead1">Subscrible To Our Newsletter</h2>
   <form class="d-flex text-center">
-    <input type="email" class="form-control me-2 text-center" placeholder="Enter your email" aria-label="Email">
+    <input type="email" class="form-control me-2 text-center" placeholder="E-mail" aria-label="Email">
     <button class="btn" type="submit">Subscribe</button>
   </form>
 </div>
+</div>
+<!--end of newsletter email-->
+<!-- Start Of Footer -->
+ 
 <footer class="footer-container">
   <div class="footer-column">
     <ul class="footer-list-container">
       <li><h2>Contact Us</h2></li>
-      <li>Email Us</li>
+      <li class="service">Email Us</li>
     </ul>
   </div>
   <div class="footer-column">
     <ul class="footer-list-container">
       <li><h2>Customer Service</h2></li>
-      <li>Shipping</li>
-      <li>Returns</li>
-      <li>Your Orders</li>
+      <li class="service">Shipping</li>
+      <li class="service">Returns</li>
+      <li class="service">Your Orders</li>
     </ul>
   </div>
   <div class="footer-column">
     <ul class="footer-list-container">
       <li><h2>About</h2></li>
-      <li>Our Purpose</li>
+      <li class="service">Our Purpose</li>
     </ul>
   </div>
 </footer>
+
+<!-- End Of Footer -->
 </html>
