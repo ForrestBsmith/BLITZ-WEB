@@ -8,7 +8,6 @@
 .carousel-container {
   position: relative;
   overflow: hidden;
-  border-radius: 16px;
 }
 
 .carousel-slide {
@@ -18,9 +17,8 @@
 }
 
 .carousel-slide img {
-  width: 100%;
-  object-fit:scale-down;
-  max-height: 23em;
+  object-fit:fill;
+  height: 25em;
 }
 
 .carousel-btn {
