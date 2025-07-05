@@ -222,7 +222,7 @@ margin-bottom: .25em;
 
 .size {
   font-weight: 600;
-  font-size: .55em;
+  font-size: .75em;
   cursor: pointer;
   border: none;
   border-radius: 5px;
@@ -241,8 +241,7 @@ margin-bottom: .25em;
   position: absolute;
   top: 1rem;
   right: 1.5rem;
-  font-size: 1.8rem;
-  color: #666;
+  color: #000000;
   cursor: pointer;
 }
 
