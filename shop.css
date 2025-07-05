@@ -123,14 +123,12 @@ body {
   display: flex;
   flex-direction: column !important;
   background: #fff;
-  width: 50% !important;
-  max-width: 85rem;
+  width: 80% !important;
   padding: 2rem;
   border-radius: 12px;
   position: relative;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   gap: 2rem;
-  min-height: 400px; /* NEW */
 }
 
 .size.selected {
@@ -146,7 +144,7 @@ body {
 
 .main-image {
   width: 185px;
-  height: 210px;
+  height: 250px;
   object-fit: cover;
   align-self: center;
 }
@@ -169,7 +167,7 @@ body {
 }
 
 .image-preview {
-  height: 50px;
+  height: 100px;
   cursor: pointer;
   transition: box-shadow 0.3s ease;
 }
@@ -185,7 +183,7 @@ body {
 }
 
 .modal-price {
-  font-size: .90em;
+  font-size: 1.5em;
   font-weight: 800;
 }
 
