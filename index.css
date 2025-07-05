@@ -544,24 +544,17 @@ form input[type="email"] {
 /* F244 News CSS
 -------------------------------------------------- */
 
-.newsbody {
-  font-size: 0.9em !important;
-  color: #000000 !important;
-  text-align: justify;
-  margin-top: 0.5em;
-  margin-bottom: 3em;
-}
 
 .lookbookheading{
   font-weight: 700 !important;
   font-style: oblique !important;
-  margin-bottom: .5em;
+    color: white !important;
+
 }
 
 .lookbooktitle{
   font-size: 1.25em !important;
   color: white !important;
-  margin-bottom: .5em;
   font-weight: 500 !important;
 }
 
@@ -571,4 +564,5 @@ form input[type="email"] {
   height: auto;
   overflow: hidden;
 }
+
 
