@@ -83,6 +83,12 @@ svg{
   align-content: center !important;
 }
 
+#cart-count {
+  font-size: 0.6rem;
+  z-index: 10;
+  margin-top: .5em;
+}
+
 .navbar-expand-xxl {
   padding: 0 !important; /* Removes padding */ 
   margin: 0 auto !important; /* Centers the navbar */
