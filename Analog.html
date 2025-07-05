@@ -9,7 +9,7 @@
   </head>
 
   <body>
-      <!-- Navbar Start -->
+<!-- Navbar Start -->
 <nav class="navbar navbar-expand-xxl">
   <div class="container-fluid mt-0">
     <!-- Top Row: Heading + Toggler -->
@@ -41,4 +41,165 @@
   </div>
 </nav>
 <!-- Navbar End -->
+
+
+      <!-- START THE FEATURETTES -->
+
+     
+      
+      <div class="row featurette v1">
+        <div class="col-md-7">
+          <h2 class="featurette-heading lh-1 text-center mt-5 mb-5">New Releases <span class="text-body-secondary"></span></h2>
+        </div>
+        
+
+
+
+      <!-- END THE FEATURETTES -->
+<script>
+  document.getElementById('44news').addEventListener('click', function () {
+    window.location.href = '44 News.html';
+  });
+  // Optional: Add a pointer cursor for better UX
+  document.getElementById('44news').style.cursor = 'pointer';
+
+    document.getElementById('Catalouge').addEventListener('click', function () {
+    window.location.href = 'FW24.html';
+  });
+  // Optional: Add a pointer cursor for better UX
+  document.getElementById('Catalouge').style.cursor = 'pointer';     
+  
+  document.getElementById('Photobooth').addEventListener('click', function () {
+    window.location.href = 'photobooth.html';
+  });
+  // Optional: Add a pointer cursor for better UX
+  document.getElementById('Photobooth').style.cursor = 'pointer';
+
+    document.getElementById('Analog').addEventListener('click', function () {
+    window.location.href = 'Analog.html';
+  });
+  // Optional: Add a pointer cursor for better UX
+  document.getElementById('Analog').style.cursor = 'pointer';
+</script>
+
+
+
+      <!--start of newsletter email-->
+<div class="newsletter text-center">
+<div class="container newslettertext">
+  <h2 class=" fw-normal lh-1 leadhead1">Subscrible To Our Newsletter</h2>
+  <form class="d-flex text-center">
+    <input type="email" class="form-control me-2 text-center" placeholder="E-mail" aria-label="Email">
+    <button class="btn" type="submit">Subscribe</button>
+  </form>
+</div>
+</div>
+<!--end of newsletter email-->
+<!-- Start Of Footer -->
+ 
+<footer class="footer-container">
+  <div class="footer-column">
+    <ul class="footer-list-container">
+      <li><h2>Contact Us</h2></li>
+      <li class="service">Email Us</li>
+    </ul>
+  </div>
+  <div class="footer-column">
+    <ul class="footer-list-container">
+      <li><h2>Customer Service</h2></li>
+      <li class="service">Shipping</li>
+      <li class="service">Returns</li>
+      <li class="service">Your Orders</li>
+    </ul>
+  </div>
+  <div class="footer-column">
+    <ul class="footer-list-container">
+      <li><h2>About</h2></li>
+      <li class="service">Our Purpose</li>
+    </ul>
+  </div>
+</footer>
+
+<!-- End Of Footer -->
+      <style>
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          user-select: none;
+        }
+  
+ 
+  
+        .b-example-divider {
+          width: 100%;
+          height: 3rem;
+          background-color: rgb(255, 255, 255);
+          border: solid rgba(0, 0, 0, .15);
+          border-width: 1px 0;
+          box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+  
+        .b-example-vr {
+          flex-shrink: 0;
+          width: 1.5rem;
+          height: 100vh;
+        }
+  
+        .bi {
+          vertical-align: -.125em;
+          fill: currentColor;
+        }
+  
+        .nav-scroller {
+          position: relative;
+          z-index: 2;
+          height: 2.75rem;
+          overflow-y: hidden;
+        }
+  
+        .nav-scroller .nav {
+          display: flex;
+          flex-wrap: nowrap;
+          padding-bottom: 1rem;
+          margin-top: -1px;
+          overflow-x: auto;
+          text-align: center;
+          white-space: nowrap;
+          -webkit-overflow-scrolling: touch;
+        }
+  
+ 
+  
+        .bd-mode-toggle {
+          z-index: 1500;
+        }
+  
+        .bd-mode-toggle .dropdown-menu .active .bi {
+          display: block !important;
+        }
+      </style>
+  
+
+  
+ 
+  
+      <!-- End Of Footer -->
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script>
+function updateCartCount() {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
+  const countElement = document.getElementById("cart-count");
+  if (countElement) {
+    countElement.textContent = totalQuantity;
+  }
+}
+document.addEventListener("DOMContentLoaded", updateCartCount);
+</script>
+  </body>
+</html>
+
 
