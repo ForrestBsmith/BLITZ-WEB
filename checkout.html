@@ -26,7 +26,7 @@
       </button>
     </div>
 
-    <!-- Collapsible Nav Links -->
+  <!-- Collapsible Nav Links -->
     <div class="collapse navbar-collapse justify-content-center" id="navbarsExampleXxl">
       <ul class="navbar-nav mb-2 mb-xl-0">
         <li class="nav-item">
@@ -42,7 +42,7 @@
           <a class="nav-link" href="https://forrestbsmith.github.io/BLITZ-WEB/44 News.html">44 News</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://forrestbsmith.github.io/BLITZ-WEB/checkout.html">Cart</a>
+          <a class="nav-link" href="https://forrestbsmith.github.io/BLITZ-WEB/checkout.html">Checkout</a>
         </li>
       </ul>
     </div>
@@ -97,57 +97,74 @@ function updateCartCount() {
   }
 }
 
+function renderCart() {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const container = document.getElementById("cart-container");
+  const totalContainer = document.getElementById("cart-total");
 
-    function renderCart() {
-      const cart = JSON.parse(localStorage.getItem("cart")) || [];
-      const container = document.getElementById("cart-container");
-      const totalContainer = document.getElementById("cart-total");
+  if (cart.length === 0) {
+    container.innerHTML = '<p class="empty">Your cart is empty.</p>';
+    totalContainer.textContent = '';
+    return;
+  }
 
-      if (cart.length === 0) {
-        container.innerHTML = '<p class="empty">Your cart is empty.</p>';
-        totalContainer.textContent = '';
-        return;
-      }
+  let total = 0;
+  container.innerHTML = cart.map((item, index) => {
+    total += item.price * item.quantity;
+    return `
+      <div class="cart-item">
+        <img src="${item.image}" alt="${item.name}">
+        <div class="item-details">
+          <p><strong>${item.name}</strong></p>
+          <p>Size: ${item.size}</p>
+          <p>
+            Quantity:
+            <input type="number" min="1" value="${item.quantity}" 
+                   onchange="updateQuantity(${index}, this.value)" 
+                   style="width: 60px;">
+          </p>
+          <p>Price: $${(item.price * item.quantity).toFixed(2)}</p>
+        </div>
+        <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
+      </div>
+    `;
+  }).join("");
 
-      let total = 0;
-      container.innerHTML = cart.map((item, index) => {
-        total += item.price * item.quantity;
-        return `
-          <div class="cart-item">
-            <img src="${item.image}" alt="${item.name}">
-            <div class="item-details">
-              <p><strong>${item.name}</strong></p>
-              <p>Size: ${item.size}</p>
-              <p>Quantity: ${item.quantity}</p>
-              <p>Price: $${(item.price * item.quantity).toFixed(2)}</p>
-            </div>
-            <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
-          </div>
-        `;
-      }).join("");
+  totalContainer.textContent = `Total: $${total.toFixed(2)}`;
+}
 
-      totalContainer.textContent = `Total: $${total.toFixed(2)}`;
-    }
+//  NEW: Update quantity and refresh cart + total + badge
+function updateQuantity(index, newQuantity) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  newQuantity = parseInt(newQuantity);
 
-    function removeItem(index) {
-      const cart = JSON.parse(localStorage.getItem("cart")) || [];
-      cart.splice(index, 1);
-      localStorage.setItem("cart", JSON.stringify(cart));
-      renderCart();
-    }
+  if (!isNaN(newQuantity) && newQuantity >= 1) {
+    cart[index].quantity = newQuantity;
+    localStorage.setItem("cart", JSON.stringify(cart));
+    renderCart();
+    updateCartCount();
+  }
+}
 
-    document.addEventListener("DOMContentLoaded", function() {
+function removeItem(index) {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.splice(index, 1);
+  localStorage.setItem("cart", JSON.stringify(cart));
   renderCart();
-  updateCartCount(); // Add this line
-});
-    // Update cart count on page load 
-    function checkout() {
-      alert("Proceeding to checkout (not implemented yet)");
-      // You can integrate Stripe, PayPal, or email capture here
-    }
+  updateCartCount();
+}
 
-    document.addEventListener("DOMContentLoaded", renderCart);
-  </script>
+function checkout() {
+  alert("Proceeding to checkout (not implemented yet)");
+  // Placeholder for integration with payment or order system
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  renderCart();
+  updateCartCount();
+});
+</script>
+
 </body>
       <!-- Start Of Footer -->
       <style>
