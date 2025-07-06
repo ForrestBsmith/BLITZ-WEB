@@ -571,4 +571,14 @@ form input[type="email"] {
   overflow: hidden;
 }
 
+.fwfeatured{
+  height: 350px !important;
+}
 
+.fwcardbody{
+  height: 100px !important;
+}
+
+.fwbutton{
+  font-size: .65em !important;
+}
