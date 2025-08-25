@@ -306,8 +306,6 @@ border: 1px solid #6c757d;
 /* Cancel it inside your shopping section */
 
 
-.fw.active {
-}
 
 .h2, h2 {
     font-size: 1.75em !important;
@@ -384,11 +382,6 @@ margin-left: .5em !important;
 
 .shop-container{
   margin-top: -1em !important;
-}
-
-.shop:hover{
-  /*background-color: rgba(245, 245, 245, 0.76); /* light gray on hover */
- /* box-shadow: 0 4px 8px rgba(10, 10, 10, 9.9); /* subtle shadow */
 }
 
 
@@ -553,8 +546,9 @@ form input[type="email"] {
 .lookbookheading{
   font-weight: 700 !important;
   font-style: oblique !important;
-    color: white !important;
-
+  color: white;
+  margin-top: .5em;
+  font-size: 1.75em !important;
 }
 
 .lookbooktitle{
@@ -576,8 +570,4 @@ form input[type="email"] {
 
 .fwcardbody{
   height: 100px !important;
-}
-
-.fwbutton{
-  font-size: .65em !important;
 }

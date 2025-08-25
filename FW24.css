@@ -60,3 +60,18 @@
   width: 100%;
 }
 
+.fwbutton{
+  width: 70%;
+}
+
+
+.lookbookbg{
+  background-image: url(img/GettyImages-139734110-5949b8a35f9b58d58a034491.jpg);
+}
+
+.newsbody{
+  background-color: rgba(0, 0, 0, 0.778) !important;
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: .2em;
+}
