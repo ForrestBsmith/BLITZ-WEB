@@ -648,6 +648,6 @@ form input[type="email"] {
   font-style: oblique;
 }
 
-.featurette-heading {margin-top: 3em !important;font-size: 3em !important;}
-.featurette p.lead{font-size: 1.5rem !important;}
+.featurette-heading {margin-top: 3em !important;font-size: 3.5em !important;}
+.featurette p.lead{font-size: 2.25rem !important;}
 }
