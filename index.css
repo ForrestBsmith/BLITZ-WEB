@@ -306,9 +306,10 @@ border: 1px solid #6c757d;
 
 
 .product-image-container img {
-  height: 24em !important;
+  height: 22em !important;
   object-fit: fill !important;
   width: 100% !important;
+  margin-bottom: 0em !important;
 }
 
 
