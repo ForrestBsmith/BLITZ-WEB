@@ -43,7 +43,7 @@ a.dropdown-item:focus {
 
 
 .heading{
-  font-size: 1.45em !important;
+  font-size: 1.65em !important;
   font-weight: 800;
   font-style: oblique;
 }
@@ -132,7 +132,6 @@ button{
 
 .collapse{
   background-color: black !important; /* Sets a background color for the collapse */
-  text-decoration: underline;
   z-index: 1000 !important; /* Ensures the collapse is above other content */
 }
 
@@ -194,7 +193,7 @@ a{
 }
 
 .carouselimage{
-  height: 10em !important;
+  height: 10.5em !important;
   width: 100% !important;
   object-position: center;
 }
@@ -305,6 +304,12 @@ border: 1px solid #6c757d;
 }
 /* Cancel it inside your shopping section */
 
+
+.product-image-container img {
+  height: 24em !important;
+  object-fit: fill !important;
+  width: 100% !important;
+}
 
 
 .h2, h2 {
@@ -570,4 +575,78 @@ form input[type="email"] {
 
 .fwcardbody{
   height: 100px !important;
+}
+
+
+
+@media (min-width: 768px) {
+  .modal-content {
+    width: 100% !important;
+    padding: 1rem;
+  }
+
+  .main-image {
+    width: 450px !important;
+    height: 350px !important;
+    object-fit: fill !important;
+  }
+
+  .preview {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    margin-top: 1rem;
+    justify-content: space-evenly;
+  }
+
+  .image-preview {
+    height: 130px!important;
+    width: 120px!important;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .productcard {
+  width: 250px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.modal-description {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+
+/* Image styling */
+.product-image-container img {
+  width: 100%;
+  height:280px !important; /* if on auto keeps aspect ratio */
+  display: block;
+  object-fit: fill;
+}
+  .product-grid .product-image-container {margin-bottom: 0em !important;}
+
+  .see-more-link {
+    font-size: .85rem !important;
+    color: black !important;
+    text-decoration: underline !important;
+  } 
+
+  .newsbody{
+  font-size: 1em !important;
+  font-weight: 600 !important;
+  letter-spacing: .12em !important;
+}
+
+.lookbookheading{
+  font-size: 2em !important;
+}
+
+.heading{
+  font-size: 2.5em !important;
+  font-weight: 800;
+  font-style: oblique;
+}
+
+.featurette-heading {margin-top: 3em !important;font-size: 3em !important;}
+.featurette p.lead{font-size: 1.5rem !important;}
 }

@@ -54,10 +54,6 @@
       <p class="newsbody text-white mb-5 mt-4">
         The F/W 25' collection is a celebration of bold colors and innovative designs. Each piece is crafted with the finest materials, ensuring both style and comfort. From oversized jackets to tailored trousers, this collection offers a range of options for every occasion. Explore the latest trends and find your perfect outfit for the season.
       </p>
-
-      <p class="newsbody text-white mb-5">
-        The F/W 25' collection is a celebration of bold colors and innovative designs. Each piece is crafted with the finest materials, ensuring both style and comfort. From oversized jackets to tailored trousers, this collection offers a range of options for every occasion. Explore the latest trends and find your perfect outfit for the season.
-      </p>
     </div>
   </div>
 <!-- Carousel Section -->
@@ -66,9 +62,43 @@
 
   <!-- Carousel Container -->
      <!-- Title and Subtitle -->
-  <div class="mt-5">
-    <h2 class="lookbookheading">T-12:09:00</h2>
-  </div>
+<div class="mt-5">
+  <h2 class="lookbookheading" id="countdown">Loading...</h2>
+</div>
+
+<script>
+  // 🎯 Set your release date/time here
+  // Example: August 31, 2025 21:00:00 (9:00 PM)
+  const releaseDate = new Date("Aug 31, 2025 24:00:00").getTime();
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = releaseDate - now;
+
+    if (distance <= 0) {
+      document.getElementById("countdown").innerHTML = "🚀 Released!";
+      clearInterval(timer);
+      return;
+    }
+
+    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Format with leading zeros
+    let formatted =
+      (hours < 10 ? "0" + hours : hours) + ":" +
+      (minutes < 10 ? "0" + minutes : minutes) + ":" +
+      (seconds < 10 ? "0" + seconds : seconds);
+
+    document.getElementById("countdown").innerHTML = "Release Timer T-" + formatted;
+  }
+
+  // Update every second
+  let timer = setInterval(updateCountdown, 1000);
+  updateCountdown();
+</script>
+
 
   <div class="carousel-container mt-3">
     <div class="carousel-slide">
@@ -140,19 +170,19 @@ document.addEventListener("DOMContentLoaded", updateCartCount);
   </div>
   <div class="row">
     <div class="col-12">
-      <h2 class="lookbookheading mb-4">Featured Items</h2>
+      <h2 class="lookbookheading m-3">Featured Items</h2>
     </div>
 
     <!-- Card 1 -->
     <div class="col-12 col-md-4">
       <div class="card mb-4">
-        <img src="img/IMG_2345.JPG" class="card-img-top fwfeatured" alt="Item 1">
+        <img src="img/IMG_2345.JPG" class=" fwfeatured" alt="Item 1">
         <div class="card-body text-center">
           <h5 class="card-title mb-0">Oversized Jacket</h5>
           <p class="card-text mb-0">$120.00</p>
         </div>
-        <div class="card-footer bg-white border-0 text-center">
-          <a href="shop.html" class="btn bg-black text-white fwbutton">Add to Cart</a>
+        <div class="card-footer border-0 text-center">
+          <a href="shop.html" class="btn fwbutton">See more</a>
         </div>
       </div>
     </div>
@@ -160,13 +190,27 @@ document.addEventListener("DOMContentLoaded", updateCartCount);
     <!-- Card 2 -->
     <div class="col-12 col-md-4">
       <div class="card mb-4">
-        <img src="img/IMG_2602.JPG" class="card-img-top fwfeatured" alt="Item 2">
+        <img src="img/IMG_2602.JPG" class=" fwfeatured" alt="Item 2">
         <div class="card-body text-center">
           <h5 class="card-title mb-0">Tailored Trousers</h5>
           <p class="card-text mb-0">$90.00</p>
         </div>
-        <div class="card-footer bg-white border-0 text-center">
-          <a href="shop.html" class="btn bg-black text-white fwbutton">Add to Cart</a>
+        <div class="card-footer  border-0 text-center">
+          <a href="shop.html" class="btn fwbutton">See more</a>
+        </div>
+      </div>
+    </div>
+
+        <!-- Card 3 -->
+    <div class="col-12 col-md-4">
+      <div class="card mb-4">
+        <img src="img/IMG_2679.JPG" class=" fwfeatured" alt="Item 1">
+        <div class="card-body text-center">
+          <h5 class="card-title mb-0">Oversized Jacket</h5>
+          <p class="card-text mb-0">$120.00</p>
+        </div>
+        <div class="card-footer border-0 text-center">
+          <a href="shop.html" class="btn fwbutton">See more</a>
         </div>
       </div>
     </div>
@@ -201,12 +245,6 @@ document.addEventListener("DOMContentLoaded", updateCartCount);
       <li class="service">Shipping</li>
       <li class="service">Returns</li>
       <li class="service">Your Orders</li>
-    </ul>
-  </div>
-  <div class="footer-column">
-    <ul class="footer-list-container">
-      <li><h2>About</h2></li>
-      <li class="service">Our Purpose</li>
     </ul>
   </div>
 </footer>

@@ -62,8 +62,18 @@
 
 .fwbutton{
   width: 70%;
+  background-color: rgb(255, 255, 255) !important;
+  color: black !important;
+}
+.fwbutton:hover{
+  background-color: black !important;
+  color: white !important;
 }
 
+.card{
+background-color: transparent !important;
+color: white !important;
+}
 
 .lookbookbg{
   background-image: url(img/GettyImages-139734110-5949b8a35f9b58d58a034491.jpg);

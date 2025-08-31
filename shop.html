@@ -93,85 +93,45 @@
                                    <!-- Cards container -->
     <div class="mensproducts">
       <!-- Product card 1 -->
-    <div class="productcard" data-price="39.99" data-name='"BLITZ"' data-bio="Essential Tee" data-preview="img/IMG_2602.JPG,img/IMG_2345.JPG,img/IMG_2679.JPG">   
+    <div class="productcard" data-price="39.99" data-name='"BLITZ-2044"' data-bio="Essential Tee" data-preview="img/IMG_2602.JPG,img/IMG_2345.JPG,img/IMG_2679.JPG">   
         <!-- Product image that triggers modal -->
     <img src="img/IMG_2602.JPG" class="product-image" onclick="openModal(this)">
         <div class="cardtext">
-          <p class="productname">BLITZ</p>
+          <p class="productname">BLITZ-2044</p>
           <span class="cardbio">Essential Tee</span>
           <p class="cardprice">$39.99</p>
         </div>
       </div>
 
-<div class="productcard" data-price="59.99" data-name='"44"' data-bio="Essential Tee" data-preview="img/IMG_9609.jpg,img/IMG_9596.jpg,img/IMG_9589.jpg">
+<div class="productcard" data-price="59.99" data-name='"B-4PREZ"' data-bio="Essential Tee" data-preview="img/IMG_9609.jpg,img/IMG_9596.jpg,img/IMG_9589.jpg">
       <!-- Product image that triggers modal -->
 <img src="img/IMG_9588.jpg" class="product-image" onclick="openModal(this)">
         <div class="cardtext">
-          <p class="productname">44</p>
+          <p class="productname">B-4PREZ</p>
           <span class="cardbio">Essential Tee</span>
           <p class="cardprice">$59.99</p>
         </div>
       </div>
 
-<div class="productcard" data-price="69.99" data-name='"BAG"' data-bio="ONE SIZE">
+<div class="productcard" data-price="69.99" data-name='"Tote"' data-bio="ONE SIZE">
       <!-- Product image that triggers modal -->
 <img src="img/bag.jpg" class="product-image" onclick="openModal(this)">
         <div class="cardtext">
-          <p class="productname">BAG</p>
+          <p class="productname">Tote</p>
           <span class="cardbio">Carry-on</span>
           <p class="cardprice">$69.99</p>
         </div>
       </div>
 
-      <div class="productcard" data-price="29.99" data-name='"44"' data-bio="LARGE CAP" data-preview="">
+      <div class="productcard" data-price="29.99" data-name='"44-Prez"' data-bio="LARGE CAP" data-preview="">
       <!-- Product image that triggers modal -->
 <img src="img/dadhat.jpg" class="product-image" onclick="openModal(this)">
         <div class="cardtext">
-          <p class="productname">44</p>
+          <p class="productname">44-Prez</p>
           <span class="cardbio">Dad Hat</span>
           <p class="cardprice">$29.99</p>
         </div>
-      </div>
-
-      <div class="productcard" data-price="69.99" data-name='"BAG"' data-bio="ONE SIZE">
-      <!-- Product image that triggers modal -->
-<img src="img/bag.jpg" class="product-image" onclick="openModal(this)">
-        <div class="cardtext">
-          <p class="productname">BAG</p>
-          <span class="cardbio">Carry-on</span>
-          <p class="cardprice">$69.99</p>
-        </div>
-      </div>
-      <div class="productcard" data-price="69.99" data-name='"BAG"' data-bio="ONE SIZE">
-      <!-- Product image that triggers modal -->
-<img src="img/bag.jpg" class="product-image" onclick="openModal(this)">
-        <div class="cardtext">
-          <p class="productname">BAG</p>
-          <span class="cardbio">Carry-on</span>
-          <p class="cardprice">$69.99</p>
-        </div>
-      </div>
-      <div class="productcard" data-price="69.99" data-name='"BAG"' data-bio="ONE SIZE">
-      <!-- Product image that triggers modal -->
-<img src="img/bag.jpg" class="product-image" onclick="openModal(this)">
-        <div class="cardtext">
-          <p class="productname">BAG</p>
-          <span class="cardbio">Carry-on</span>
-          <p class="cardprice">$69.99</p>
-        </div>
-      </div>
-      <div class="productcard" data-price="69.99" data-name='"BAG"' data-bio="ONE SIZE">
-      <!-- Product image that triggers modal -->
-<img src="img/bag.jpg" class="product-image" onclick="openModal(this)">
-        <div class="cardtext">
-          <p class="productname">BAG</p>
-          <span class="cardbio">Carry-on</span>
-          <p class="cardprice">$69.99</p>
-        </div>
-      </div>
-
-
-      
+      </div> 
   </div> 
       
 <!-- Modal structure -->
@@ -345,8 +305,9 @@ function addToCart() {
   }
 
   localStorage.setItem("cart", JSON.stringify(cart));
-  alert("Added to cart!");
   updateCartCount();
+
+  closeModal();
 }
 </script>
 
@@ -389,12 +350,6 @@ document.addEventListener("DOMContentLoaded", updateCartCount);
       <li class="service">Shipping</li>
       <li class="service">Returns</li>
       <li class="service">Your Orders</li>
-    </ul>
-  </div>
-  <div class="footer-column">
-    <ul class="footer-list-container">
-      <li><h2>About</h2></li>
-      <li class="service">Our Purpose</li>
     </ul>
   </div>
 </footer>
