@@ -633,13 +633,13 @@ form input[type="email"] {
   } 
 
   .newsbody{
-  font-size: 1em !important;
+  font-size: 1.5em !important;
   font-weight: 600 !important;
-  letter-spacing: .12em !important;
+  letter-spacing: .15em !important;
 }
 
 .lookbookheading{
-  font-size: 2em !important;
+  font-size: 3em !important;
 }
 
 .heading{
@@ -650,4 +650,116 @@ form input[type="email"] {
 
 .featurette-heading {margin-top: 3em !important;font-size: 3.5em !important;}
 .featurette p.lead{font-size: 2.25rem !important;}
+
+
+.carouselimage{
+  height: 15em !important;
 }
+
+
+.fw{
+height: 5.5em !important;
+font-size: 1.25em;}
+
+}
+
+@media (min-width: 1024px) {
+.carousel-slide img {
+  height: 40em !important;
+  object-fit:cover;}
+
+  .carouselimage{
+    height: 20em !important;
+  }
+
+.carouselheading {
+  font-size: 2em !important;
+}
+.carouselspan{
+  font-size: 1.25em !important;
+}
+
+.btn-group-sm > .btn, .btn-sm {
+    font-size: 1rem !important;
+}
+
+.fw{
+  font-size: 1.5em !important;
+}
+
+  
+}
+
+  @media (min-width: 1888px) {
+
+    .navbar-nav .nav-link {
+      font-size: 1.4rem !important;
+      font-weight: 800;
+      text-shadow: black 0.1em .10em .0em;
+      width: 70% !important;
+      display: flex;
+      margin: 0em !important;
+      margin-left: 6em !important;
+    }
+
+    .nav-item{
+      text-align: center !important;
+      width: 70% !important;
+    }
+
+    .carousel-slide img {
+      object-fit:cover;
+  }
+
+    .carouselimage{
+    height: 28em !important;
+  }
+
+.carouselheading{
+  font-size: 2.5em !important;
+}
+
+.carouselspan{
+  font-size: 1.5em !important;
+}
+.btn-group-sm > .btn, .btn-sm {
+    font-size: 1.25rem !important;
+}
+
+.heading{
+  font-size: 3.5em !important;
+}
+.fw{
+  font-size: 2em !important;
+}
+
+.featurette-heading {font-size: 5.5em !important;}
+.featurette p.lead{font-size: 2.75rem !important;}
+
+.mainimage{
+  height: 35em !important;
+}
+
+.mainimagecontainer{
+  height: 35em !important;  
+}
+
+.shop{
+  height: 60em !important;
+}
+.shopheader{
+  font-size: 3.5em !important;
+  margin-top: 1em !important;
+}
+
+.see-more-link {
+    font-size: 1.25rem !important;
+    color: black !important;
+    text-decoration: underline !important;
+    letter-spacing: .115em !important;
+  }
+
+.product-image-container img {
+  height: 35em !important; /* if on auto keeps aspect ratio */
+  }
+  }
