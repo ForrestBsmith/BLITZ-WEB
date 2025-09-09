@@ -1,7 +1,7 @@
 .carousel-section {
   text-align: center;
   margin: 60px auto;
-  max-width: 1450px;
+  max-width: 950px;
   margin-top: 1em;
 }
 
@@ -80,8 +80,67 @@ color: white !important;
 }
 
 .newsbody{
-  background-color: rgba(0, 0, 0, 0.778) !important;
-  font-size: 1em;
-  font-weight: 400;
-  letter-spacing: .2em;
+  background-color: rgba(0, 0, 0, 0.779) !important;
+  font-size: 2em !important;
+  height: 14em !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+}
+
+.newsbody2{
+  background-color: rgba(0, 0, 0, 0.779) !important;
+  font-size: 2em !important;
+  font-weight: 600 !important;
+  height: 13em !important;
+  text-align: center !important;
+}
+
+p.newsbody, p.newsbody2 {
+  padding: 80px;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* Small screens */
+@media (max-width: 480px) {
+  .newsbody {
+    font-size: .8em !important;
+  }
+}
+
+/* Tablets */
+@media (min-width: 425px) and (max-width: 768px) {
+  .newsbody, .newsbody2 {
+    font-size: .95em !important;
+    padding: 10px !important;
+    height: auto !important;
+  }
+}
+
+/* Small laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .newsbody, .newsbody2 {
+    font-size: 1.5em !important;
+    height: auto !important;
+  }
+  .fwfeatured {
+    height: 28em !important;
+  }
+}
+
+/* Desktops */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .newsbody, .newsbody2 {
+    font-size: 1.8em !important;
+    height: auto !important;
+  }
+  .fwfeatured {
+    height: 40em !important;
+  }
+}
+
+/* Large screens / 4K */
+@media (min-width: 1441px) {
+  .fwfeatured {
+    height: 45em !important;
+  }
 }

@@ -11,23 +11,21 @@
   <body>
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-xxl">
-  <div class="container-fluid mt-0">
-    <!-- Top Row: Heading + Toggler -->
-    <div class="d-flex justify-content-between align-items-center">
-      <div class="heading-container m-2">
-        <a href="index.html" class="heading">BLITZFORTYFOUR</a>
-      </div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleXxl" aria-controls="navbarsExampleXxl" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-          <span id="cart-count" class="position-absolute translate-middle badge rounded-pill bg-danger">
-    0
-  </span>
-      </button>
-    </div>
+  <div class="container-fluid">
+    <!-- Navbar Brand / Heading -->
+    <a class="navbar-brand heading" href="index.html">BLITZFORTYFOUR</a>
 
-  <!-- Collapsible Nav Links -->
+    <!-- Hamburger Toggler on the far right -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleXxl" aria-controls="navbarsExampleXxl" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      <span id="cart-count" class="position-absolute translate-middle badge rounded-pill bg-danger">
+        0
+      </span>
+    </button>
+
+    <!-- Collapsible Nav Links -->
     <div class="collapse navbar-collapse justify-content-center" id="navbarsExampleXxl">
-      <ul class="navbar-nav mb-0 mb-xl-0">
+      <ul class="navbar-nav mb-2 mb-xl-0">
         <li class="nav-item">
           <a class="nav-link" href="shop.html">Shop</a>
         </li>
@@ -45,6 +43,7 @@
   </div>
 </nav>
 <!-- Navbar End -->
+
 
 
  
@@ -122,12 +121,12 @@
   // Optional: Add a pointer cursor for better UX
   document.getElementById('fwContainer').style.cursor = 'pointer';
 </script>
- <!-- CLICK ON DEMAND
+
        <script>
   document.getElementById('fwContainer').addEventListener('click', function () {
     this.classList.toggle('active');
   });
-</script> -->
+</script>
    
 
       <style>
@@ -357,43 +356,67 @@ window.location.href = "blog2.html";
 
 
 
-      <!--start of newsletter email-->
-<div class="newsletter text-center">
-<div class="container newslettertext">
-  <h2 class=" fw-normal lh-1 leadhead1" id="emaillist">Subscrible To Our Newsletter</h2>
-  <form class="d-flex text-center">
-    <input type="email" class="form-control me-2 text-center" placeholder="E-mail" aria-label="Email">
-    <button class="btn bg-white text-black" type="submit">Subscribe</button>
-  </form>
-</div>
-</div>
-<!--end of newsletter email-->
-<!-- Start Of Footer -->
- 
-<footer class="footer-container">
-  <div class="footer-column">
-    <ul class="footer-list-container">
-      <li><h2>Contact Us</h2></li>
-      <li class="service">Email Us</li>
-    </ul>
+<!-- Newsletter Section -->
+<section class="newsletter text-white bg-white py-5">
+  <div class="container text-center mt-5">
+    <h2 class="fw-bold mb-3 text-black">Stay in the Loop</h2>
+    <p class="mb-4 text-secondary text-black">Subscribe to receive updates on new collections, special offers, and industry news.</p>
+    <form class="d-flex justify-content-center flex-wrap">
+      <input 
+        type="email" 
+        class="form-control me-2 mb-2 mb-md-0 text-center" 
+        placeholder="Enter your email address" 
+        aria-label="Email"
+        style="max-width: 320px;"
+      >
+      <button class="btn btn-light text-black px-4" type="submit">Subscribe</button>
+    </form>
   </div>
-  <div class="footer-column">
-    <ul class="footer-list-container">
-      <li><h2>Customer Service</h2></li>
-      <li class="service">Shipping</li>
-      <li class="service">Returns</li>
-      <li class="service">Your Orders</li>
-    </ul>
-  </div>
-  <div class="footer-column">
-    <ul class="footer-list-container">
-      <li><h2>About</h2></li>
-      <li class="service">Our Purpose</li>
-    </ul>
+</section>
+
+<!-- Footer -->
+<footer class="footer text-white pt-5">
+  <div class="container">
+    <div class="row">
+
+      <!-- Column 1 -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold mb-3">About Us</h5>
+        <p class="text-secondary small">
+          BLITZFORTYFOUR is dedicated to creating timeless, innovative designs while delivering exceptional service to our clients worldwide.
+        </p>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold mb-3 text-center">Customer Support</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Shipping Information</a></li>
+          <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Returns & Exchanges</a></li>
+          <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Track Your Order</a></li>
+          <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold mb-3 text-center">Connect With Us</h5>
+        <p class="text-secondary small text-center">Follow us on social media and stay updated.</p>
+        <div class="d-flex gap-3">
+          <a href="#" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-white fs-4"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-white fs-4"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white fs-4"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="border-top border-secondary mt-4 pt-3 text-center">
+      <small class="text-secondary">© 2025 BLITZFORTYFOUR. All Rights Reserved.</small>
+    </div>
   </div>
 </footer>
-
-<!-- End Of Footer -->
       <style>
         .bd-placeholder-img {
           font-size: 1.125rem;

@@ -389,14 +389,23 @@ border: 1px solid #6c757d;
   color: #ffffff !important;
   height: auto;
   position: relative;
-  box-shadow: rgba(0, 0, 0, 0.486) 0.01em 0em 0.5em;
-  text-shadow: black 0.05em 0.05em 0.05em;
+  text-shadow: rgba(0, 0, 0, 0.492) 0.05em 0.05em 0.05em;
   margin: .75em;
   margin-bottom: 0em ;
   padding: 1em;
   overflow: hidden;
   transition: height 0.3s ease;
 }
+
+.fw:hover{ color: #d3c8c8  !important;}
+
+#fwContainer:hover{
+  background-size: cover;
+  background-color: #49464621;
+  box-shadow: 0 4px 8px rgba(10, 10, 10, 9.9) !important; /* subtle shadow */
+  cursor: pointer;
+}
+
 
 #fwContainer{
   font-size: 1.25em !important;
@@ -422,7 +431,7 @@ margin-left: .5em !important;
 
 .see-more-link {
   font-size: 0.4rem;
-  color: #000000; /* muted gray color */
+  color: #d3c8c8; /* muted gray color */
   text-decoration: none;
   outline: transparent !important;
   transition: color 0.2s;
@@ -593,6 +602,8 @@ form input[type="email"] {
 
 
 
+
+
 /* F244 News CSS
 -------------------------------------------------- */
 
@@ -722,6 +733,7 @@ form input[type="email"] {
 .fw{
 height: 5.5em !important;
 font-size: 1.25em;}
+
 
 }
 
