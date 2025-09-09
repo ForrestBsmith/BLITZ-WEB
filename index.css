@@ -734,7 +734,10 @@ form input[type="email"] {
 height: 5.5em !important;
 font-size: 1.25em;}
 
-
+.news44{
+  font-size: 1.25em !important;
+  font-weight: 600 !important;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -853,5 +856,13 @@ font-size: 1.25em;}
 
   .analog, .news{
     height: 15em !important;
+  }
+  .news44{
+  font-size: 1.25em !important;
+  font-weight: 600 !important;
+  }
+
+  .card-title{
+    font-size: 1.5em !important;
   }
 }
