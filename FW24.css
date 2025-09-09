@@ -91,7 +91,7 @@ color: white !important;
   background-color: rgba(0, 0, 0, 0.779) !important;
   font-size: 2em !important;
   font-weight: 600 !important;
-  height: 13em !important;
+  height: 13em;
   text-align: center !important;
 }
 
@@ -100,12 +100,13 @@ p.newsbody, p.newsbody2 {
   margin: 0;
   box-sizing: border-box;
 }
-/* Small screens */
-@media (max-width: 480px) {
-  .newsbody {
-    font-size: .8em !important;
+ @media (max-width: 424px) {
+  .newsbody, .newsbody2 {
+    font-size: .85em !important;
+    padding: 5px !important;
+    height: auto !important;
   }
-}
+ }
 
 /* Tablets */
 @media (min-width: 425px) and (max-width: 768px) {
