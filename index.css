@@ -890,6 +890,19 @@ font-size: 1.25em;}
   .card-title{
     font-size: 1.5em !important;
   }
+}
 
+@media (min-width: 2560px) {
 
+.description-wrapper{
+  width: 50% !important;
+  margin-left: 26.5em !important;
+}
+
+    .preview {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    margin-top: 1rem;
+    margin-left: 39.5em;
+  }
 }
