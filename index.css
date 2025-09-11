@@ -655,7 +655,7 @@ form input[type="email"] {
     overflow-x: auto;
     flex-wrap: nowrap;
     margin-top: 1rem;
-    justify-content: space-evenly;
+    margin-left: 1em;
   }
 
   .image-preview {
@@ -764,6 +764,12 @@ font-size: 1.25em;}
   font-size: 1.5em !important;
 }
 
+  .preview {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    margin-top: 1rem;
+    margin-left: 7em;
+  }
   
 }
 
@@ -817,9 +823,28 @@ font-size: 1.25em;}
   height: 35em !important;
 }
 
+.main-image {
+    width: 450px !important;
+    height: 350px !important;
+    object-fit: fill !important;
+  }
+
 .mainimagecontainer{
   height: 35em !important;  
 }
+
+
+.description-wrapper{
+  width: 50% !important;
+  margin-left: 13.5em !important;
+}
+
+    .preview {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    margin-top: 1rem;
+    margin-left: 15.75em;
+  }
 
 .shop{
   height: 60em !important;
@@ -865,4 +890,6 @@ font-size: 1.25em;}
   .card-title{
     font-size: 1.5em !important;
   }
+
+
 }
