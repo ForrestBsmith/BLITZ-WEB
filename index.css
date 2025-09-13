@@ -836,14 +836,14 @@ font-size: 1.25em;}
 
 .description-wrapper{
   width: 50% !important;
-  margin-left: 13.5em !important;
+  margin-left: 20.5em !important;
 }
 
     .preview {
     overflow-x: auto;
     flex-wrap: nowrap;
     margin-top: 1rem;
-    margin-left: 15.75em;
+    margin-left: 26em;
   }
 
 .shop{
