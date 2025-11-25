@@ -3,13 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>BlitzFortyFour</title>
+    <title>BLITZFORTYFOUR | Shop</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="shop.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
   </head>
+  <body>
 <!-- Navbar Start -->
-<nav class="navbar navbar-expand-xxl">
+<nav class="navbar navbar-expand-xxl navbar-dark">
   <div class="container-fluid">
     <!-- Navbar Brand / Heading -->
     <a class="navbar-brand heading" href="index.html">BLITZFORTYFOUR</a>
@@ -69,7 +71,7 @@
 </script>
 
                             <!-- start of product cards-->
-<body>
+<main class="site-main">
   <!-- Header outside flex row -->
   <div class="section-container">
     <header class="shopheader section-header">
@@ -320,36 +322,51 @@ function updateCartCount() {
 }
 document.addEventListener("DOMContentLoaded", updateCartCount);
 </script>
-</body>
 
-<!-- Newsletter Section -->
-<section class="newsletter text-white bg-white py-5">
-  <div class="container text-center mt-5">
-    <h2 class="fw-bold mb-3 text-black">Stay in the Loop</h2>
-    <p class="mb-4 text-secondary text-black">Subscribe to receive updates on new collections, special offers, and industry news.</p>
-    <form class="d-flex justify-content-center flex-wrap">
-      <input 
-        type="email" 
-        class="form-control me-2 mb-2 mb-md-0 text-center" 
-        placeholder="Enter your email address" 
-        aria-label="Email"
-        style="max-width: 320px;"
-      >
-      <button class="btn btn-light text-black px-4" type="submit">Subscribe</button>
-    </form>
-  </div>
-</section>
-
-<!-- Footer -->
+<!-- Footer (Newsletter + Info) -->
 <footer class="footer text-white pt-5">
   <div class="container">
+    <div class="rain-44-overlay">
+      <span class="rain-44">44</span>
+      <span class="rain-44">BLITZ</span>
+      <span class="rain-44">44</span>
+      <span class="rain-44">BLITZ</span>
+      <span class="rain-44">44</span>
+      <span class="rain-44">BLITZ</span>
+      <span class="rain-44">44</span>
+      <span class="rain-44">BLITZ</span>
+      <span class="rain-44">44</span>
+      <span class="rain-44">BLITZ</span>
+      <span class="rain-44">44</span>
+      <span class="rain-44">BLITZ</span>
+    </div>
+    <!-- Newsletter Row -->
+    <div class="row justify-content-center mb-4">
+      <div class="col-lg-8">
+        <div class="newsletter text-center py-4">
+          <h2 class="fw-bold mb-3">Join the House List</h2>
+          <p class="mb-4 text-secondary">Access early releases, private events, and editorials.</p>
+          <form class="d-flex justify-content-center flex-wrap">
+            <input 
+              type="email" 
+              class="form-control me-2 mb-2 mb-md-0 text-center" 
+              placeholder="Enter your email address" 
+              aria-label="Email"
+              style="max-width: 320px;"
+            >
+            <button class="btn btn-light text-black px-4" type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <div class="row">
 
       <!-- Column 1 -->
       <div class="col-md-4 mb-4">
         <h5 class="fw-bold mb-3">About Us</h5>
         <p class="text-secondary small">
-          BLITZFORTYFOUR is dedicated to creating timeless, innovative designs while delivering exceptional service to our clients worldwide.
+          BLITZFORTYFOUR crafts modern, elevated essentials with a focus on fabric, fit, and timeless design—built to live in every day.
         </p>
       </div>
 
@@ -383,7 +400,7 @@ document.addEventListener("DOMContentLoaded", updateCartCount);
     </div>
   </div>
 </footer>
-    </main>
+</main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
