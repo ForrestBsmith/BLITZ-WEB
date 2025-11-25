@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>BLITZFORTYFOUR | Shop</title>
+    <title>BLITZFORTYFOUR | Product</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="shop.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -45,117 +45,26 @@
 </nav>
 <!-- Navbar End -->
 
-
-                            <!-- start of product cards-->
-  <script>
-  function sortProducts() {
-    const sortValue = document.getElementById('sort').value;
-    const container = document.querySelector('.section-container .mensproducts');
-    const cards = Array.from(container.querySelectorAll('.productcard'));
-
-    let sortedCards;
-
-    if (sortValue === 'lowToHigh') {
-      sortedCards = cards.sort((a, b) => parseFloat(a.dataset.price) - parseFloat(b.dataset.price));
-    } else if (sortValue === 'highToLow') {
-      sortedCards = cards.sort((a, b) => parseFloat(b.dataset.price) - parseFloat(a.dataset.price));
-    } else {
-      // Default order (Featured)
-      sortedCards = cards; // assumes initial order is "featured"
-    }
-
-    // Clear and re-append sorted cards
-    container.innerHTML = '';
-    sortedCards.forEach(card => container.appendChild(card));
-  }
-</script>
-
-                            <!-- start of product cards-->
 <main class="site-main">
-  <!-- Header outside flex row -->
-  <div class="section-container">
-    <header class="shopheader section-header">
-      <h1 class=""></h1>Mens Apparel
-    </header>
+  <section class="product-detail container py-5">
+    <div class="row g-4">
+      <div class="col-md-6">
+        <img id="product-main-image" src="" alt="Product image" class="main-image">
+        <div id="product-thumbs" class="preview mt-3"></div>
+      </div>
+      <div class="col-md-6">
+        <h1 id="product-name" class="lookbookheading mb-3"></h1>
+        <p id="product-bio" class="newsbody mb-2"></p>
+        <p id="product-price" class="modalprice fs-4 fw-bold mb-4"></p>
 
-<div class="sort-row">
-  <div class="sort-container">
-    <label for="sort"></label>
-    <select id="sort" onchange="sortProducts()">
-      <option value="featured">Featured</option>
-      <option value="lowToHigh">Price: Low to High</option>
-      <option value="highToLow">Price: High to Low</option>
-    </select>
-  </div>
-</div>
+        <div id="product-sizes" class="modal-size mb-3"></div>
 
-
-                                   <!-- Cards container -->
-    <div class="mensproducts">
-      <!-- Product card 1 -->
-    <div class="productcard" data-id="blitz-term" data-price="39.99" data-name='"BLITZ-TERM"' data-bio="Essential Tee" data-preview="img/IMG_2602.JPG,img/IMG_2345.JPG,img/IMG_2679.JPG">   
-    <img src="img/IMG_2602.JPG" class="product-image">
-        <div class="cardtext">
-          <p class="productname">BLITZ-2044</p>
-          <span class="cardbio">Essential Tee</span>
-          <p class="cardprice">$39.99</p>
+        <div class="checkoutwrapper">
+          <button class="checkout" id="add-to-cart-btn">Add To Cart</button>
         </div>
       </div>
-
-<div class="productcard" data-id="b-4prez" data-price="59.99" data-name='"B-4PREZ"' data-bio="Essential Tee" data-preview="img/IMG_9609.jpg,img/IMG_9596.jpg,img/IMG_9589.jpg">
-<img src="img/IMG_9588.jpg" class="product-image">
-        <div class="cardtext">
-          <p class="productname">B-4PREZ</p>
-          <span class="cardbio">Essential Tee</span>
-          <p class="cardprice">$59.99</p>
-        </div>
-      </div>
-
-<div class="productcard" data-id="tote" data-price="69.99" data-name='"Tote"' data-bio="ONE SIZE">
-<img src="img/bag.jpg" class="product-image">
-        <div class="cardtext">
-          <p class="productname">Tote</p>
-          <span class="cardbio">Carry-on</span>
-          <p class="cardprice">$69.99</p>
-        </div>
-      </div>
-
-      <div class="productcard" data-id="44-cap" data-price="29.99" data-name='"44-Cap"' data-bio="LARGE CAP" data-preview="">
-<img src="img/dadhat.jpg" class="product-image">
-        <div class="cardtext">
-          <p class="productname">44-Prez</p>
-          <span class="cardbio">Dad Hat</span>
-          <p class="cardprice">$29.99</p>
-        </div>
-      </div> 
-  </div> 
-
-<script>
-  // Navigate to product detail page when a card is clicked
-  document.addEventListener("DOMContentLoaded", function () {
-    const cards = document.querySelectorAll(".productcard");
-    cards.forEach(card => {
-      card.addEventListener("click", () => {
-        const id = card.getAttribute("data-id");
-        if (id) {
-          window.location.href = "product.html?id=" + encodeURIComponent(id);
-        }
-      });
-    });
-  });
-</script>
-
-<script>
-function updateCartCount() {
-  const cart = JSON.parse(localStorage.getItem("cart")) || [];
-  const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
-  const countElement = document.getElementById("cart-count");
-  if (countElement) {
-    countElement.textContent = totalQuantity;
-  }
-}
-document.addEventListener("DOMContentLoaded", updateCartCount);
-</script>
+    </div>
+  </section>
 
 <!-- Footer (Newsletter + Info) -->
 <footer class="footer text-white pt-5">
@@ -200,7 +109,7 @@ document.addEventListener("DOMContentLoaded", updateCartCount);
       <div class="col-md-4 mb-4">
         <h5 class="fw-bold mb-3">About Us</h5>
         <p class="text-secondary small">
-BLITZFORTYFOUR is built on the principles of thoughtful craftsmanship: elevated materials, precise tailoring, and silhouettes that last. The result is a wardrobe of modern essentials—quiet, understated, and designed to complement every moment of daily life.
+          BLITZFORTYFOUR crafts modern, elevated essentials with a focus on fabric, fit, and timeless design—built to live in every day.
         </p>
       </div>
 
@@ -235,6 +144,144 @@ BLITZFORTYFOUR is built on the principles of thoughtful craftsmanship: elevated 
   </div>
 </footer>
 </main>
+
+<script>
+const products = {
+  "blitz-term": {
+    name: "BLITZ-TEE",
+    bio: "Essential Tee",
+    price: 39.99,
+    images: ["img/IMG_2602.JPG", "img/IMG_2345.JPG", "img/IMG_2679.JPG"],
+    sizes: ["SMALL", "MEDIUM", "LARGE"]
+  },
+  "b-4prez": {
+    name: "B-4PREZ",
+    bio: "Essential Tee",
+    price: 59.99,
+    images: ["img/IMG_9588.jpg", "img/IMG_9609.jpg", "img/IMG_9596.jpg", "img/IMG_9589.jpg"],
+    sizes: ["SMALL", "MEDIUM", "LARGE"]
+  },
+  "tote": {
+    name: "Tote-Tote",
+    bio: "Carry-on",
+    price: 69.99,
+    images: ["img/bag.jpg"],
+    sizes: ["ONE SIZE"]
+  },
+  "44-cap": {
+    name: "44-Prez",
+    bio: "Dad Hat",
+    price: 29.99,
+    images: ["img/dadhat.jpg"],
+    sizes: ["ONE SIZE"]
+  }
+};
+
+function renderProduct() {
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+  const product = products[id];
+
+  const nameEl = document.getElementById("product-name");
+  const bioEl = document.getElementById("product-bio");
+  const priceEl = document.getElementById("product-price");
+  const mainImgEl = document.getElementById("product-main-image");
+  const thumbsEl = document.getElementById("product-thumbs");
+  const sizesEl = document.getElementById("product-sizes");
+
+  if (!product) {
+    nameEl.textContent = "Product not found";
+    bioEl.textContent = "";
+    priceEl.textContent = "";
+    return;
+  }
+
+  nameEl.textContent = product.name;
+  bioEl.textContent = product.bio;
+  priceEl.textContent = "$" + product.price.toFixed(2);
+
+  if (product.images && product.images.length > 0) {
+    mainImgEl.src = product.images[0];
+    thumbsEl.innerHTML = "";
+    product.images.forEach(src => {
+      const img = document.createElement("img");
+      img.src = src;
+      img.alt = product.name;
+      img.className = "image-preview";
+      img.addEventListener("click", () => {
+        mainImgEl.src = src;
+      });
+      thumbsEl.appendChild(img);
+    });
+  }
+
+  sizesEl.innerHTML = "";
+  product.sizes.forEach(size => {
+    const btn = document.createElement("button");
+    btn.textContent = size;
+    btn.className = "size";
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".size").forEach(b => b.classList.remove("selected"));
+      btn.classList.add("selected");
+    });
+    sizesEl.appendChild(btn);
+  });
+}
+
+function addToCartFromPage() {
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+  const product = products[id];
+  if (!product) return;
+
+  const selectedSizeBtn = document.querySelector(".size.selected");
+  const size = selectedSizeBtn ? selectedSizeBtn.textContent : (product.sizes[0] || "");
+
+  const mainImgSrc = document.getElementById("product-main-image").src;
+
+  const productId = (product.name + "-" + size).toLowerCase().replace(/[^a-z0-9]/g, "-");
+
+  const cartItem = {
+    id: productId,
+    name: product.name,
+    description: product.bio,
+    price: product.price,
+    size: size,
+    image: mainImgSrc,
+    quantity: 1
+  };
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const existingIndex = cart.findIndex(item => item.id === cartItem.id);
+  if (existingIndex > -1) {
+    cart[existingIndex].quantity += 1;
+  } else {
+    cart.push(cartItem);
+  }
+  localStorage.setItem("cart", JSON.stringify(cart));
+  updateCartCount();
+}
+
+function updateCartCount() {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
+  const countElement = document.getElementById("cart-count");
+  if (countElement) {
+    countElement.textContent = totalQuantity;
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  renderProduct();
+  updateCartCount();
+  const btn = document.getElementById("add-to-cart-btn");
+  if (btn) {
+    btn.addEventListener("click", addToCartFromPage);
+  }
+});
+</script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
+
