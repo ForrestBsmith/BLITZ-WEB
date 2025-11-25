@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>BlitzFortyFour</title>
+    <title>BLITZFORTYFOUR | Modern Menswear</title>
     <link rel="stylesheet" href="index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
   </head>
 
   <body>
 <!-- Navbar Start -->
-<nav class="navbar navbar-expand-xxl">
+<nav class="navbar navbar-expand-xxl navbar-dark">
   <div class="container-fluid">
     <!-- Navbar Brand / Heading -->
     <a class="navbar-brand heading" href="index.html">BLITZFORTYFOUR</a>
@@ -44,9 +45,21 @@
 </nav>
 <!-- Navbar End -->
 
+<main class="site-main">
+  <!-- Promo Ticker Start -->
+  <section class="promo-ticker border-top border-bottom border-dark-subtle">
+    <div class="promo-track">
+      <div class="promo-item">FW25 PREVIEW · LIMITED RUNS ·</div>
+      <div class="promo-item">COMPLIMENTARY SHIPPING ON ORDERS OVER $150 ·</div>
+      <div class="promo-item">BLITZFORTYFOUR STUDIO EVENTS · RSVP SOON ·</div>
+      <div class="promo-item">FW25 PREVIEW · LIMITED RUNS ·</div>
+      <div class="promo-item">COMPLIMENTARY SHIPPING ON ORDERS OVER $150 ·</div>
+      <div class="promo-item">BLITZFORTYFOUR STUDIO EVENTS · RSVP SOON ·</div>
+      <div class="promo-item">NEW ESSENTIALS TEES ALL COLORS · FW25 PREVIEW ·</div>
 
-
- 
+    </div>
+  </section>
+  <!-- Promo Ticker End -->
   <!-- Carousel Start -->
 <div id="myCarousel" class="carousel slide mb-0" data-bs-ride="carousel">
   <div class="carousel-indicators">
@@ -58,25 +71,25 @@
     <div class="carousel-item active text-center">
       <img src="img/Pebble-Beach2.jpg" class="d-block w-100 carouselimage" alt="first slide">
       <div class="carousel-text p-4">
-        <h1 class="carouselheading">E-mail Newsletter</h1>
-        <p class="opacity-75 carouselspan">Join our E-mail list to stay up to date.</p>
-        <p><a class="btn btn-sm btn bg-white text-black" href="#emaillist">Sign up today</a></p>
+        <h1 class="carouselheading">BLITZFORTYFOUR</h1>
+        <p class="opacity-75 carouselspan">Modern essentials and refined statement pieces.</p>
+        <p><a class="btn btn-sm btn-hero" href="shop.html">Explore the collection</a></p>
       </div>
     </div>
     <div class="carousel-item text-center">
       <img src="img/traffic.jpg" class="d-block w-100 carouselimage" alt="second slide">
       <div class="carousel-text p-4 texthead">
-        <h1 class="carouselheading">S/S B44 24'</h1>
-        <p class="opacity-75 carouselspan">Browse Collection</p>
-        <p><a class="btn btn-sm btn bg-white text-black" href="shop.html">Shop Now</a></p>
+        <h1 class="carouselheading">Spring / Summer 2025</h1>
+        <p class="opacity-75 carouselspan">Light layers, sharp tailoring, everyday luxury.</p>
+        <p><a class="btn btn-sm btn-hero" href="shop.html">Shop Now</a></p>
       </div>
     </div>
     <div class="carousel-item text-center">
       <img src="img/rawImage.jpg" class="d-block w-100 carouselimage" alt="third slide">
       <div class="carousel-text p-4">
-        <h1 class="carouselheading">F/W LOOKBOOK 24'</h1>
-        <p class="opacity-75 carouselspan">Upcoming Event Details</p>
-        <p class="homebutton"><a class="btn btn-sm btn bg-white text-black" href="FW24.html">Browse gallery</a></p>
+        <h1 class="carouselheading">Fall / Winter 2025</h1>
+        <p class="opacity-75 carouselspan">An elevated lookbook of the season ahead.</p>
+        <p class="homebutton"><a class="btn btn-sm btn-hero" href="FW24.html">Browse gallery</a></p>
       </div>
     </div>
   </div>
@@ -93,15 +106,32 @@
 
       <!-- START THE FEATURETTES -->
 
-     
+      
       
       <div class="row featurette v1">
-        <div class="col-md-7">
-          <h2 class="featurette-heading lh-1 text-center">New Releases <span class="text-body-secondary"><p class="lead text-center">BlitzFortyFour Essential Tee</p></span></h2>
+        <div class="col-md-7 d-flex flex-column align-items-center align-items-md-start">
+          <div class="d-flex align-items-center gap-3">
+         
+            <div class="d-none d-md-block rotating-badge">
+              <svg viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+                <defs>
+                  <path id="circlePath"
+                    d="M 100,100 m -70,0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0" />
+                </defs>
+                <circle cx="100" cy="100" r="70" fill="none" />
+                <text x="100" y="112" text-anchor="middle" class="badge-center">44</text>
+                <text font-size="12" letter-spacing="4">
+                  <textPath href="#circlePath">
+                    BLITZFORTYFOUR · NEW ARRIVALS ·SHOP NOW · 
+                  </textPath>
+                </text>
+              </svg>
+            </div>
+          </div>
         </div>
 
         <div class="col-md-5 mainimagecontainer">
-          <img src="img/Remini20210713164928053.jpg" class="w-100 mainimage" alt="image1">
+          <img src="img/Remini20210713164928053.jpg" class="w-100 mainimage" alt="New Arrivals Essential Tee">
         </div>
       </div>
 
@@ -109,9 +139,9 @@
      <div class="row" id="fwContainer">
   <div class="col-md-7 fw">
     <h2 class=" lh-1">
-      F/W 25' Lookbook
+      FW25 Preview Lookbook
     </h2>
-    <p class="lead">Browse Gallery</p>
+    <p class="lead">Discover the upcoming season.</p>
   </div>
 </div>
 <script>
@@ -130,25 +160,46 @@
    
 
       <style>
+        /* Homepage product cards – modern layout */
         .product-grid .product-card {
           display: flex;
           flex-direction: column;
           text-decoration: none;
           color: inherit;
           width: 100%;
-          transition: transform 0.3s ease;
+          padding: 1.1rem 1rem 1.35rem;
+          border-radius: 18px;
+          background-color: #f8f8f8;
+          border: 1px solid #e3e3e3;
+          box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+          opacity: 0;
+          transform: translateY(16px);
+          transition:
+            transform 0.25s ease,
+            box-shadow 0.25s ease,
+            border-color 0.25s ease,
+            opacity 0.35s ease;
+        }
+
+        .product-grid .product-card.is-visible {
+          opacity: 1;
+          transform: translateY(0);
         }
       
         .product-grid .product-card:hover {
           transform: translateY(-4px);
+          box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+          border-color: #d0d0d0;
         }
       
         .product-grid .product-image-container {
           position: relative;
           width: 100%;
-          padding-top: 125%; /* 4:5 aspect ratio */
+          aspect-ratio: 4 / 5;
           overflow: hidden;
-          margin-bottom: -6.5em; /* Adjust to align with text */
+          border-radius: 14px;
+          margin-bottom: 0.9rem;
+          background-color: #ededed;
         }
       
         .product-grid .product-image-container img {
@@ -156,89 +207,49 @@
           top: 0;
           left: 0;
           width: 100%;
-          height: 85%;
+          height: 100%;
           object-fit: cover;
-          transition: opacity 0.3s ease;
+          transform: scale(1);
+          transition: transform 0.35s ease;
+        }
+
+        .product-grid .product-card:hover .product-image-container img {
+          transform: scale(1.04);
         }
       
         .product-grid .product-name {
           display: block;
-          margin-top: 0.75rem;
-          font-weight: 500;
-          font-size: 1rem;
+          margin-bottom: 0.15rem;
+          font-weight: 600;
+          font-size: 0.95rem;
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
           text-align: left;
-                    color: #000000;
-
+          color: #111111;
         }
       
         .product-grid .product-color {
-          font-size: 0.875rem;
-          color: #000000;
+          font-size: 0.85rem;
+          color: #777777;
           text-align: left;
+          margin-bottom: 0.2rem;
         }
       
         .product-grid .product-price {
-          font-size: 1rem;
-          font-weight: bold;
-          margin-top: 0.25rem;
+          font-size: 0.95rem;
+          font-weight: 700;
+          margin-top: 0.35rem;
           text-align: left;
-                    color: #000000;
-
+          color: #111111;
         }
-
-        .product-card {
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  color: inherit;
-  padding: 10px;
-  transition: transform 0.2s ease;
-}
-
-.product-card:hover {
-  transform: scale(1.03);
-}
-
-.product-image-container {
-  width: 100%;
-  aspect-ratio: 4 / 5; /* Maintain consistent image ratio */
-  overflow: hidden;
-  margin-bottom: 10px;
-}
-
-.product-image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.product-name {
-  display: block;
-  font-weight: 600;
-  font-size: 1rem;
-  margin-bottom: 4px;
-}
-
-.product-color {
-  display: block;
-  color: #777;
-  font-size: 0.85rem;
-  margin-bottom: 4px;
-}
-
-.product-price {
-  font-size: 1rem;
-  font-weight: bold;
-}
-
       </style>
       
       <!-- Start of Shopping Section -->
       <div class="shop featurette py-2 product-grid">
         <div class="container shop-container">
           <div class="d-flex justify-content-between align-items-end">
-            <h2 class="shopheader lh-1 mb-0">Men's Apparel</h2>
-            <a href="shop.html" class="see-more-link">See More</a>
+            <h2 class="shopheader lh-1 mb-0 text-white">Featured Essentials</h2>
+            <a href="shop.html" class="see-more-link text-white">See More</a>
           </div>
 
           <div class="row g-4 mb-10">
@@ -296,17 +307,19 @@
       <div class="row align-items-start g-0 digest">
         <!-- First Box -->
         <div class="col-md-6 news" id="44news">
-          <div class="hover-box left-box p-4 h-100">
-            <h2 class="leadhead lh-1">44 NEWS</h2>
-            <p class="lead">Monthly Edition</p>
+          <div class="hover-box left-box p-4 h-100 bg-white">
+            <h2 class="leadhead lh-1">The Journal</h2>
+            <p class="lead mb-0">Stories, features, and releases.</p>
+            <span class="linkpad-arrow"><i class="bi bi-arrow-up-right"></i></span>
           </div>
         </div>
       
         <!-- Second Box -->
         <div class="col-md-6 analog" id="44DAYS">
-          <div class="hover-box p-4 h-100">
-            <h2 class="leadhead lh-1">FORTYFOUR DAYS</h2>
-            <p class="lead">An analog Journey</p>
+          <div class="hover-box p-4 h-100 bg-white">
+            <h2 class="leadhead lh-1">FortyFour Days</h2>
+            <p class="lead mb-0">An analog journey in film.</p>
+            <span class="linkpad-arrow"><i class="bi bi-arrow-up-right"></i></span>
           </div>
         </div>
       </div>
@@ -315,17 +328,19 @@
             <div class="row align-items-start g-0 digest">
         <!-- First Box -->
         <div class="col-md-6 news" id="FW24">
-          <div class="hover-box left-box p-4 h-100">
-            <h2 class="leadhead  lh-1">F/W 25'</h2>
-            <p class="lead">Monthly Edition</p>
+          <div class="hover-box left-box p-4 h-100 bg-white">
+            <h2 class="leadhead  lh-1">FW25 Lookbook</h2>
+            <p class="lead mb-0">Preview the upcoming collection.</p>
+            <span class="linkpad-arrow"><i class="bi bi-arrow-up-right"></i></span>
           </div>
         </div>
       
         <!-- Second Box -->
         <div class="col-md-6 analog" id="Community">
-          <div class="hover-box p-4 h-100">
-            <h2 class="leadhead lh-1">Community Events</h2>
-            <p class="lead">Monthly Events</p>
+          <div class="hover-box p-4 h-100 bg-white">
+            <h2 class="leadhead lh-1">Community</h2>
+            <p class="lead mb-0">Pop-ups, runs, and gatherings.</p>
+            <span class="linkpad-arrow"><i class="bi bi-arrow-up-right"></i></span>
           </div>
         </div>
       </div>
@@ -355,35 +370,36 @@ window.location.href = "blog2.html";
 </script>
 
 
-
-<!-- Newsletter Section -->
-<section class="newsletter text-white bg-white py-5">
-  <div class="container text-center mt-5">
-    <h2 class="fw-bold mb-3 text-black">Stay in the Loop</h2>
-    <p class="mb-4 text-secondary text-black">Subscribe to receive updates on new collections, special offers, and industry news.</p>
-    <form class="d-flex justify-content-center flex-wrap">
-      <input 
-        type="email" 
-        class="form-control me-2 mb-2 mb-md-0 text-center" 
-        placeholder="Enter your email address" 
-        aria-label="Email"
-        style="max-width: 320px;"
-      >
-      <button class="btn btn-light text-black px-4" type="submit">Subscribe</button>
-    </form>
-  </div>
-</section>
-
-<!-- Footer -->
+<!-- Footer (Newsletter + Info) -->
 <footer class="footer text-white pt-5">
   <div class="container">
+    <!-- Newsletter Row -->
+    <div class="row justify-content-center mb-4">
+      <div class="col-lg-8">
+        <div class="newsletter text-center py-4">
+          <h2 class="fw-bold mb-3">Join the House List</h2>
+          <p class="mb-4 text-secondary">Access early releases, private events, and editorials.</p>
+          <form class="d-flex justify-content-center flex-wrap">
+            <input 
+              type="email" 
+              class="form-control me-2 mb-2 mb-md-0 text-center" 
+              placeholder="Enter your email address" 
+              aria-label="Email"
+              style="max-width: 320px;"
+            >
+            <button class="btn btn-light text-black px-4" type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <div class="row">
 
       <!-- Column 1 -->
       <div class="col-md-4 mb-4">
         <h5 class="fw-bold mb-3">About Us</h5>
         <p class="text-secondary small">
-          BLITZFORTYFOUR is dedicated to creating timeless, innovative designs while delivering exceptional service to our clients worldwide.
+          BLITZFORTYFOUR crafts modern, elevated essentials with a focus on fabric, fit, and timeless design—built to live in every day.
         </p>
       </div>
 
@@ -494,6 +510,30 @@ function updateCartCount() {
   }
 }
 document.addEventListener("DOMContentLoaded", updateCartCount);
+</script>
+<script>
+// Reveal product cards on scroll
+document.addEventListener("DOMContentLoaded", function () {
+  const cards = document.querySelectorAll(".product-grid .product-card");
+  if (!("IntersectionObserver" in window) || cards.length === 0) {
+    cards.forEach(card => card.classList.add("is-visible"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          obs.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.25 }
+  );
+
+  cards.forEach(card => observer.observe(card));
+});
 </script>
   </body>
 </html>

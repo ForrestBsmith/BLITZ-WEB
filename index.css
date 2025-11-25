@@ -12,9 +12,14 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --b44-bg: linear-gradient(180deg, #f5f5f5 0, #e6e6e6 25%, #3a3a3a 60%, #181818 100%);
+}
+
 body {
-  background-color: #000000 !important;
-  background-size:cover !important;
+  background: var(--b44-bg) fixed !important;
+  background-attachment: fixed;
+  background-size: cover !important;
   width: 100% !important;
 }
 
@@ -83,6 +88,32 @@ svg{
   align-content: center !important;
 }
 
+.rotating-badge {
+  width: 580px;
+  height: 580px;
+  perspective: 800px; 
+  margin-left: 15em;
+}
+
+.rotating-badge svg {
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  animation: badge-spin 14s linear infinite;
+}
+
+@keyframes badge-spin {
+  0%   { transform: rotate3d(1, 1, 0, 0deg); }
+  50%  { transform: rotate3d(1, 1, 0, 180deg); }
+  100% { transform: rotate3d(1, 1, 0, 360deg); }
+}
+
+.badge-center {
+  font-size: 42px;
+  font-weight: 800;
+  fill: #000000;
+}
+
 #cart-count {
   font-size: 0.6rem;
   z-index: 10;
@@ -92,6 +123,10 @@ svg{
 .navbar-expand-xxl {
   padding: 0 !important; /* Removes padding */ 
   margin: 0 auto !important; /* Centers the navbar */
+}
+
+.navbar {
+  background: rgba(0, 0, 0, 0.9) !important;
 }
 
 /* Navbar container fix */
@@ -153,6 +188,39 @@ text-shadow:rgb(0, 0, 0) 0.01em 0.1em 0.1em;
 color: white !important;
 }
 
+.promo-ticker {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #f5f5f5;
+}
+
+.promo-track {
+  display: inline-flex;
+  gap: 3rem;
+  animation: promo-scroll 20s linear infinite;
+}
+
+.promo-item {
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+@keyframes promo-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 
 
 .navbar-nav .nav-link:hover {
@@ -178,7 +246,6 @@ button{
 }
 
 .collapse{
-  background-color: black !important; /* Sets a background color for the collapse */
   z-index: 1000 !important; /* Ensures the collapse is above other content */
 }
 
@@ -221,6 +288,26 @@ h1{
 box-shadow: 0 4px 8px rgba(10, 10, 10, 9.9); /* subtle shadow */
 }
 
+.btn-hero {
+  border-radius: 999px;
+  padding: 0.5rem 1.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff !important;
+  backdrop-filter: blur(8px);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.btn-hero:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.55);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
 
 a{
   color:white !important;
@@ -233,6 +320,7 @@ a{
 .carouselheading{
   font-size: 1.25em;
   margin: 0em;
+  font-weight: 800;
 }
 .carouselspan{
   font-size: .85em;
@@ -335,15 +423,27 @@ a{
 
 
 /* Apply hover background ONLY to rows NOT inside a .featurette section */
-.hover-box:hover {
-  background-color: rgba(245, 245, 245, 0.199) !important; /* light gray on hover */
-  box-shadow: 0 4px 8px rgba(10, 10, 10, 9.9); /* subtle shadow */
+.hover-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  border-radius: 18px;
+  border: 1px solid #000000;
+  background-color: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(14px);
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
-.hover-box {
-transition: background-color 0.3s ease;
-box-shadow: #ffffff;
-border: 1px solid #6c757d;
+.hover-box:hover {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  border-color: #000000;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  transform: translateY(-2px);
 }
 
 .v1{
@@ -365,26 +465,6 @@ border: 1px solid #6c757d;
     font-size: 1.75em !important;
 }
 
-.fw::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-image: url(mob.jpg);
-  transform: scaleX(-1);
-  z-index: -1;
-  opacity: .225;
-  transition: opacity 0.3s ease;
-}
-
-.fw.active::before {
-  opacity: 1;
-}
-
 .fw {
   color: #ffffff !important;
   height: auto;
@@ -397,7 +477,36 @@ border: 1px solid #6c757d;
   transition: height 0.3s ease;
 }
 
-.fw:hover{ color: #d3c8c8  !important;}
+
+#fwContainer {
+  position: relative;
+  font-size: 1.25em !important;
+  overflow: hidden;
+}
+
+#fwContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image: url("img/traffic.jpg");
+  z-index: -1;
+  opacity: 0.7;
+  filter: brightness(0.35) saturate(1.1);
+  transition: opacity 0.35s ease;
+}
+
+#fwContainer:hover::before {
+  opacity: 0.85;
+}
+
+#fwContainer.active::before {
+  opacity: 0.85;
+}
 
 #fwContainer:hover{
   background-size: cover;
@@ -407,18 +516,13 @@ border: 1px solid #6c757d;
 }
 
 
-#fwContainer{
-  font-size: 1.25em !important;
-}
-
-
 .shop{
-  background-color: rgb(255, 255, 255); /* light gray on hover */
   box-shadow: 0 4px 8px rgba(10, 10, 10, 9.9); /* subtle shadow */
   border-top: none !important;
   height: auto !important;
   margin-bottom: 0em;
   width: 100% !important;
+  background-color: rgba(0, 0, 0, 0.03);
 }
 
 .shopheader{
@@ -429,30 +533,16 @@ margin-left: .5em !important;
 }
 
 
-.see-more-link {
-  font-size: 0.4rem;
-  color: #d3c8c8; /* muted gray color */
-  text-decoration: none;
-  outline: transparent !important;
-  transition: color 0.2s;
-  z-index: 1000; /* Ensures the link is above other content */
-  position: relative; /* Ensures the link is positioned relative to its parent */
-}
-
-.see-more-link:hover {
-  color: #000; /* darker on hover */
-}
-
 .shop-container{
   margin-top: -1em !important;
 }
 
 
 .digest{
-  background-color: rgb(255, 255, 255); /* light gray on hover */
-  box-shadow: 0 4px 8px rgba(10, 10, 10, 9.9); /* subtle shadow */
-  text-align: center;
-  margin-top: .25em !important;
+  background-color: transparent;
+  box-shadow: none;
+  text-align: left;
+  padding-inline: .5rem;
 }
 
 
@@ -473,22 +563,45 @@ h2{
 }
 
 .news:hover{
-  background-size: cover;
-  background-color: rgba(112, 102, 102, 0.288);
+  background-color: transparent;
+  color: white !important;
 }
 .news{
-  box-shadow: rgba(0, 0, 0, 0.486) 0.01em 0em 0.5em;
-  height: 7.5em;
+  box-shadow: none;
+  height: auto;
 }
 
 .analog{
-  box-shadow: rgba(0, 0, 0, 0.486) 0.01em 0em 0.5em;
-  height: 7.5em;
+  box-shadow: none;
+  height: auto;
 }
 
 .analog:hover{
-  background-size: cover;
-  background-color: rgba(112, 102, 102, 0.288);
+  background-color: transparent;
+    color: white !important;
+
+}
+
+.linkpad-arrow {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  font-size: 1rem;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.hover-box:hover .linkpad-arrow {
+  background-color: #ffffff;
+  color: #000000;
+  transform: translateX(2px);
 }
 
 .see-more-link {
@@ -552,7 +665,7 @@ form input[type="email"] {
 
 .newsletter{
   height: auto;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.16);
   width: 100% !important;
 }
 
@@ -567,13 +680,17 @@ form input[type="email"] {
   justify-content: space-between;
   padding: 40px;
   flex-wrap: wrap;
-  background-color: white;
+  background-color: transparent;
 }
 
 .footer-column {
   flex: 1;
   min-width: 150px;
   margin: 0 20px;
+}
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.22);
 }
 
 .footer-container h2 {
@@ -839,27 +956,22 @@ font-size: 1.25em;}
   margin-left: 20.5em !important;
 }
 
-    .preview {
+  .preview {
     overflow-x: auto;
     flex-wrap: nowrap;
     margin-top: 1rem;
     margin-left: 26em;
   }
 
-.shop{
-  height: 60em !important;
-}
 .shopheader{
-  font-size: 3.5em !important;
+  font-size: 3rem !important;
   margin-top: 1em !important;
 }
 
 .see-more-link {
-    font-size: 1.25rem !important;
-    color: black !important;
-    text-decoration: underline !important;
-    letter-spacing: .115em !important;
-  }
+  font-size: 0.9rem !important;
+  letter-spacing: .115em !important;
+}
 
 .product-image-container img {
   height: 35em !important; /* if on auto keeps aspect ratio */
