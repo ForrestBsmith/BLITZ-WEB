@@ -451,6 +451,17 @@ a{
   
 }
 
+/* Blog sidebar */
+.blog-sidebar-card {
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(14px);
+  padding: 1.4rem 1.25rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
+  color: #ffffff;
+}
+
 /* Thin out the marketing headings */
 /* rtl:begin:remove */
 
