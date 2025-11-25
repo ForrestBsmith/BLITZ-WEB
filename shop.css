@@ -54,8 +54,8 @@ a{color: white !important;}
   overflow: hidden;
   padding: 1.1rem 1rem 1.35rem;
   border-radius: 18px;
-  background-color: #f8f8f8;
-  border: 1px solid #e3e3e3;
+  background-color: #f8f8f800;
+  border: 3px solid #e3e3e3;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
   transition:
     transform 0.25s ease,
@@ -98,7 +98,7 @@ a{color: white !important;}
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #111111;
+  color: #ffffff;
 }
 
 .cardbio {
@@ -111,7 +111,7 @@ a{color: white !important;}
   font-size: 0.95rem;
   font-weight: 700;
   margin: 0.35rem 0 0;
-  color: #111111;
+  color: #ffffff;
 }
 
 
