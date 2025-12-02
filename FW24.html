@@ -100,16 +100,16 @@
 
   <div class="carousel-container mt-3">
     <div class="carousel-slide">
-      <img src="img/IMG_2345.JPG" alt="Slide 1">
-      <img src="img/IMG_2602.JPG" alt="Slide 2">
-      <img src="img/IMG_2679.JPG" alt="Slide 3">
-      <img src="img/IMG_2345.JPG" alt="Slide 4">
-      <img src="img/IMG_2602.JPG" alt="Slide 5">
-      <img src="img/IMG_2679.JPG" alt="Slide 6">
+      <img src="img/IMG_2345.JPG" alt="Lookbook slide 1" class="active">
+      <img src="img/IMG_2602.JPG" alt="Lookbook slide 2">
+      <img src="img/IMG_2679.JPG" alt="Lookbook slide 3">
+      <img src="img/IMG_2345.JPG" alt="Lookbook slide 4">
+      <img src="img/IMG_2602.JPG" alt="Lookbook slide 5">
+      <img src="img/IMG_2679.JPG" alt="Lookbook slide 6">
     </div>
     <!-- Buttons -->
-    <button class="carousel-btn visually-hidden prev" onclick="moveSlide(-1)">&#10094;</button>
-    <button class="carousel-btn visually-hidden next" onclick="moveSlide(1)">&#10095;</button>
+    <button class="carousel-btn prev" type="button" aria-label="View previous look" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="carousel-btn next" type="button" aria-label="View next look" onclick="moveSlide(1)">&#10095;</button>
   </div>
 <!-- Carousel Section End -->
 </div>
@@ -119,37 +119,55 @@
 
 <script>
   let currentIndex = 0;
+  let autoSlideTimer;
 
-  function setCarouselWidth() {
+  function initializeCarousel() {
     const slides = document.querySelector('.carousel-slide');
+    if (!slides) return;
     const images = slides.children;
-    const container = document.querySelector('.carousel-container');
-    slides.style.width = `${images.length * container.offsetWidth}px`;
-    for (let img of images) {
-      img.style.width = `${container.offsetWidth}px`;
+    if (!images.length) return;
+
+    const presetIndex = Array.from(images).findIndex((img) => img.classList.contains('active'));
+    currentIndex = presetIndex !== -1 ? presetIndex : 0;
+    images[currentIndex].classList.add('active');
+    startAutoSlide();
+  }
+
+  function moveSlide(direction, triggeredAutomatically = false) {
+    const slides = document.querySelector('.carousel-slide');
+    if (!slides) return;
+    const images = slides.children;
+    const totalSlides = images.length;
+    if (totalSlides <= 1) return;
+
+    const previousIndex = currentIndex;
+    currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+
+    const prevImage = images[previousIndex];
+    const nextImage = images[currentIndex];
+    const exitClass = direction === 1 ? 'exit-to-left' : 'exit-to-right';
+    const enterClass = direction === 1 ? 'enter-from-right' : 'enter-from-left';
+
+    prevImage.classList.remove('active', 'enter-from-left', 'enter-from-right', 'exit-to-left', 'exit-to-right');
+    nextImage.classList.remove('enter-from-left', 'enter-from-right', 'exit-to-left', 'exit-to-right');
+
+    prevImage.classList.add(exitClass);
+    nextImage.classList.add('active', enterClass);
+
+    setTimeout(() => prevImage.classList.remove(exitClass), 700);
+    setTimeout(() => nextImage.classList.remove(enterClass), 700);
+
+    if (!triggeredAutomatically) {
+      startAutoSlide();
     }
   }
 
-  function moveSlide(direction) {
-    const slides = document.querySelector('.carousel-slide');
-    const images = slides.children;
-    const totalSlides = images.length;
-
-    currentIndex += direction;
-
-    // Loop slides
-    if (currentIndex < 0) currentIndex = totalSlides - 1;
-    if (currentIndex >= totalSlides) currentIndex = 0;
-
-    const slideWidth = images[0].offsetWidth;
-    slides.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+  function startAutoSlide() {
+    clearInterval(autoSlideTimer);
+    autoSlideTimer = setInterval(() => moveSlide(1, true), 5000);
   }
 
-  window.addEventListener('resize', setCarouselWidth);
-  window.addEventListener('DOMContentLoaded', () => {
-    setCarouselWidth();
-    setInterval(() => moveSlide(1), 3000);
-  });
+  document.addEventListener('DOMContentLoaded', initializeCarousel);
 </script>
 
 

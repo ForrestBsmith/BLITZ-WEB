@@ -91,13 +91,16 @@ width: 100% !important;
 
 svg{
   align-content: center !important;
+  max-width: 100%;
+  height: auto;
 }
 
 .rotating-badge {
-  width: 580px;
-  height: 580px;
+  width: clamp(220px, 32vw, 540px);
+  height: clamp(220px, 32vw, 540px);
   perspective: 800px; 
-  margin-left: 15em;
+  margin-left: clamp(0px, 6vw, 15em);
+  margin-right: 0;
 }
 
 .rotating-badge svg {
@@ -105,6 +108,20 @@ svg{
   height: 100%;
   transform-origin: center;
   animation: badge-spin 14s linear infinite;
+  margin-left: 6em;
+  margin-top: 2em;
+}
+
+@media (max-width: 1199.98px) {
+  .rotating-badge {
+    margin: 0 auto 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rotating-badge svg {
+    animation: none;
+  }
 }
 
 @keyframes badge-spin {
@@ -114,7 +131,7 @@ svg{
 }
 
 .badge-center {
-  font-size: 42px;
+  font-size: clamp(24px, 3vw, 42px);
   font-weight: 800;
   fill: #000000;
 }
@@ -857,7 +874,7 @@ form input[type="email"] {
   }
 
   .main-image {
-    width: 450px !important;
+    width: 350px !important;
     height: 350px !important;
     object-fit: fill !important;
   }
@@ -1036,7 +1053,7 @@ font-size: 1.25em;}
 
 .main-image {
     width: 450px !important;
-    height: 350px !important;
+    height: 650px !important;
     object-fit: fill !important;
   }
 
