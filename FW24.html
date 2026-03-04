@@ -47,11 +47,18 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-12 lookbookbg">
-      <h2 class="lookbookheading">- F/W 25' Collection</h2>
-      <p class="newsbody text-white py-5">
-        The F/W 25' collection is a celebration of bold colors and innovative designs. The F/W 25' collection is a celebration of bold colors and innovative desig is crafted with the finest materials,  Each piece is crafted with the finest materials,The F/W 25' collection is a celebration of bold colors and innovative designs. Each piece is crafted with the finest materials, ensuring both style and comfort. From oversized jackets to tailored trousers, this collection offers a range of options for every occasion. Explore the latest trends and find your perfect outfit for the season.
-      </p>
+    <div class="col-12 lookbookbg hero-media">
+      <div class="hero-video-frame">
+        <video
+          class="hero-video"
+          src="img/Vids/5977016-uhd_3840_2160_25fps.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          aria-label="F/W 25 hero video"
+        ></video>
+      </div>
     </div>
   </div>
 <!-- Carousel Section -->
@@ -65,31 +72,31 @@
 </div>
 
 <script>
-  // 🎯 Set your release date/time here
-  // Example: August 31, 2025 21:00:00 (9:00 PM)
-  const releaseDate = new Date("2025-09-12T12:00:00").getTime();
+  const countdownEnd = new Date();
+  countdownEnd.setFullYear(countdownEnd.getFullYear() + 4);
+  const releaseDate = countdownEnd.getTime();
 
   function updateCountdown() {
     const now = new Date().getTime();
     const distance = releaseDate - now;
 
     if (distance <= 0) {
-      document.getElementById("countdown").innerHTML = "🚀 Released!";
+      document.getElementById("countdown").innerHTML = "ETA - 00Y:00D:00:00:00";
       clearInterval(timer);
       return;
     }
 
-    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    const totalDays = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const years = Math.floor(totalDays / 365);
+    const days = totalDays % 365;
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    // Format with leading zeros
-    let formatted =
-      (hours < 10 ? "0" + hours : hours) + ":" +
-      (minutes < 10 ? "0" + minutes : minutes) + ":" +
-      (seconds < 10 ? "0" + seconds : seconds);
+    const pad = (value) => String(value).padStart(2, "0");
+    const formatted = `${pad(years)}Y:${pad(days)}D:${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
 
-    document.getElementById("countdown").innerHTML = "ETA  - " + formatted;
+    document.getElementById("countdown").innerHTML = "ETA - " + formatted;
   }
 
   // Update every second
@@ -99,76 +106,17 @@
 
 
   <div class="carousel-container mt-3">
-    <div class="carousel-slide">
-      <img src="img/IMG_2345.JPG" alt="Lookbook slide 1" class="active">
-      <img src="img/IMG_2602.JPG" alt="Lookbook slide 2">
-      <img src="img/IMG_2679.JPG" alt="Lookbook slide 3">
-      <img src="img/IMG_2345.JPG" alt="Lookbook slide 4">
-      <img src="img/IMG_2602.JPG" alt="Lookbook slide 5">
-      <img src="img/IMG_2679.JPG" alt="Lookbook slide 6">
+    <img
+      src="img/pexels-jan-kroon-357445-1038935.jpg"
+      alt="F/W 25 featured look"
+      class="fw25-feature-image"
+    >
+    <div class="fw25-feature-copy" aria-live="polite">
+      <span class="fw25-copy-text">COLLECTING</span><span class="fw25-copy-dots">...</span>
     </div>
-    <!-- Buttons -->
-    <button class="carousel-btn prev" type="button" aria-label="View previous look" onclick="moveSlide(-1)">&#10094;</button>
-    <button class="carousel-btn next" type="button" aria-label="View next look" onclick="moveSlide(1)">&#10095;</button>
   </div>
 <!-- Carousel Section End -->
 </div>
-<!-- Carousel Script -->
-<!-- This script handles the carousel functionality -->
-
-
-<script>
-  let currentIndex = 0;
-  let autoSlideTimer;
-
-  function initializeCarousel() {
-    const slides = document.querySelector('.carousel-slide');
-    if (!slides) return;
-    const images = slides.children;
-    if (!images.length) return;
-
-    const presetIndex = Array.from(images).findIndex((img) => img.classList.contains('active'));
-    currentIndex = presetIndex !== -1 ? presetIndex : 0;
-    images[currentIndex].classList.add('active');
-    startAutoSlide();
-  }
-
-  function moveSlide(direction, triggeredAutomatically = false) {
-    const slides = document.querySelector('.carousel-slide');
-    if (!slides) return;
-    const images = slides.children;
-    const totalSlides = images.length;
-    if (totalSlides <= 1) return;
-
-    const previousIndex = currentIndex;
-    currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
-
-    const prevImage = images[previousIndex];
-    const nextImage = images[currentIndex];
-    const exitClass = direction === 1 ? 'exit-to-left' : 'exit-to-right';
-    const enterClass = direction === 1 ? 'enter-from-right' : 'enter-from-left';
-
-    prevImage.classList.remove('active', 'enter-from-left', 'enter-from-right', 'exit-to-left', 'exit-to-right');
-    nextImage.classList.remove('enter-from-left', 'enter-from-right', 'exit-to-left', 'exit-to-right');
-
-    prevImage.classList.add(exitClass);
-    nextImage.classList.add('active', enterClass);
-
-    setTimeout(() => prevImage.classList.remove(exitClass), 700);
-    setTimeout(() => nextImage.classList.remove(enterClass), 700);
-
-    if (!triggeredAutomatically) {
-      startAutoSlide();
-    }
-  }
-
-  function startAutoSlide() {
-    clearInterval(autoSlideTimer);
-    autoSlideTimer = setInterval(() => moveSlide(1, true), 5000);
-  }
-
-  document.addEventListener('DOMContentLoaded', initializeCarousel);
-</script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -187,8 +135,7 @@ document.addEventListener("DOMContentLoaded", updateCartCount);
 
   <div class="container">
     <div class="row">
-    <div class="col-12 lookbookbg">
-            <h2 class="lookbookheading">- About</h2>
+    <div class="col-12 lookbookbg about-section">
       <p class="newsbody2 text-white py-5">
         The F/W 25' collection is a celebration of bold colors and innovative designs. Each piece is crafted with the finest materials, ensuring both style and comfort. From oversized jackets to tailored trousers, this collection offers a range of options for every occasion. Explore the latest trends and find your perfect outfit for the season. this collection offers a range of options for every occasion. Explore the latest trends and find your perfect outfit for the season. this collection offers a range of options for every occasion. Explore the latest trends and find your perfect outfit for the season.
       </p>
